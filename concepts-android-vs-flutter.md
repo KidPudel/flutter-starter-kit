@@ -6,7 +6,7 @@ Basic concepts in Android development and their equivalent concepts in Flutter:
 
 3. `Intent` (Android) vs `Navigator` (Flutter) - Both are used to navigate between screens in an app. An Intent is used to start a new Activity, while a Navigator is used to push and pop Routes in the app's navigation stack.
 
-4. `XML` layout files (Android) vs `Build Methods` (Flutter) - Both are used to define the UI of a screen. In Android, the layout is defined using XML, while in Flutter, the layout is defined using a build method in a StatefulWidget or StatelessWidget.
+4. `XML` layout files (Android) vs `Build Methods` (Flutter) - Both are used to define the UI of a screen. In Android, the layout is defined using `XML`, while in Flutter, the layout is defined using a build method in a `StatefulWidget` or `StatelessWidget`.
 
 5. `RecyclerView` (Android) vs `ListView` (Flutter) - Both are used to display a list of items in a scrollable view. A RecyclerView is a more flexible and powerful version of the ListView, but the basic idea is the same.
 
