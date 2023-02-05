@@ -5,4 +5,4 @@ lookup for flutter world 🍃
 # [Project structure](https://github.com/KidPudel/flutter-starter-kit/blob/main/project_structure.md)
 
 
-Basics of flutter development:  
+[Main dart file](https://github.com/KidPudel/flutter-starter-kit/blob/main/main.dart)
