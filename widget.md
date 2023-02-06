@@ -31,3 +31,75 @@ For example, in Android, this is similar to placing an `ImageView` with your log
 
 ---
 
+The following example shows how to use a StatelessWidget. A common StatelessWidget is the Text widget. If you look at the implementation of the Text widget you’ll find that it subclasses StatelessWidget.
+
+```dart
+Text(
+  'I like Flutter!',
+  style: TextStyle(fontWeight: FontWeight.bold),
+);
+```
+As you can see, the Text Widget has no state information associated with it, it renders what is passed in its constructors and nothing more.
+
+But, what if you want to make “I Like Flutter” change dynamically, for example when clicking a FloatingActionButton?
+
+To achieve this, wrap the Text widget in a StatefulWidget and update it when the user clicks the button.
+
+For example:
+
+```dart
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const SampleApp());
+}
+
+class SampleApp extends StatelessWidget {
+  const SampleApp({super.key});
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Sample App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const SampleAppPage(),
+    );
+  }
+}
+
+class SampleAppPage extends StatefulWidget {
+  const SampleAppPage({super.key});
+
+  @override
+  State<SampleAppPage> createState() => _SampleAppPageState();
+}
+
+class _SampleAppPageState extends State<SampleAppPage> {
+  // Default placeholder text.
+  String textToShow = 'I Like Flutter';
+
+  void _updateText() {
+    setState(() {
+      // Update the text.
+      textToShow = 'Flutter is Awesome!';
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Sample App'),
+      ),
+      body: Center(child: Text(textToShow)),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _updateText,
+        tooltip: 'Update Text',
+        child: const Icon(Icons.update),
+      ),
+    );
+  }
+}
+```
