@@ -85,3 +85,15 @@ body: Column(
           ],
         )
 ```
+
+![image](https://user-images.githubusercontent.com/63263301/217004315-9af4fc67-4c5f-4523-ba96-1e9dba699040.png)
+
+
+```dart
+body: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+```
+
+![image](https://user-images.githubusercontent.com/63263301/217005516-6e6645d8-77c7-4b73-9933-9ae1b01492db.png)
