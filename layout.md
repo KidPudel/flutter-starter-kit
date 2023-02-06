@@ -55,3 +55,33 @@ body: Column(
 
 ![image](https://user-images.githubusercontent.com/63263301/216999277-b167b406-82b5-4cd2-a29d-e3ccb2d8de4a.png)
 
+But we're not done, because if we have couple of objects and if want to move just parts of childer around, we have a problems:
+
+```dart
+body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Container(
+              color: Colors.cyan,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text("data"),
+                ],
+              ),
+            ),
+            Container(
+              color: Colors.redAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text("data"),
+                ],
+              ),
+            ),
+          ],
+        )
+```
