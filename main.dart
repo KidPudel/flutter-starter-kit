@@ -62,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
   
   // build is the method that basically builds this widget
-  // Describes the UI represented by this widget
+  // Describes the part of the UI represented by this widget
   // framework calls this method in a number of different situations. For example:
   // - After calling initState.
   // - After calling didUpdateWidget.
