@@ -99,3 +99,33 @@ body: Column(
 ![image](https://user-images.githubusercontent.com/63263301/217005516-6e6645d8-77c7-4b73-9933-9ae1b01492db.png)
 
 so to prevent that, we can use `Expanded` Widget that expands a child of Column, Row or Flex, so that the child fills all the available space.
+
+
+```dart
+body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+            Expanded(flex: 1, child: Container(
+              color: Colors.cyan,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: const [
+                  Text("data"),
+                ],
+              ),
+            ),),
+            Expanded(flex: 1, child: Container(
+              color: Colors.redAccent,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: const [
+                  Text("data"),
+                ],
+              ),
+            ),),
+          ],
+        )
+```
