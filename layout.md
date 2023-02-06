@@ -97,3 +97,5 @@ body: Column(
 ```
 
 ![image](https://user-images.githubusercontent.com/63263301/217005516-6e6645d8-77c7-4b73-9933-9ae1b01492db.png)
+
+so to prevent that, we can use `Expanded` Widget that expands a child of Column, Row or Flex, so that the child fills all the available space.
