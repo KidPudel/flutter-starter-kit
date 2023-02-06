@@ -16,7 +16,11 @@ There are two types of `Widgets`:
 - `Statefull` — a widget that has a **State** object that stores state data across frames and restores it.
 - `Stateless` — a widget with no state information.
 
-> StatelessWidgets are useful when the part of the user interface you are describing does not depend on anything other than the configuration information in the object.
-For example, in Android, this is similar to placing an ImageView with your logo. The logo is not going to change during runtime, so use a StatelessWidget in Flutter.
-If you want to dynamically change the UI based on data received after making an HTTP call or user interaction then you have to work with StatefulWidget and tell the Flutter framework that the widget’s State has been updated so it can update that widget.
-The important thing to note here is at the core both stateless and stateful widgets behave the same. They rebuild every frame, the difference is the StatefulWidget has a State object that stores state data across frames and restores it.
+> `StatelessWidgets` are useful when the part of the user interface you are describing does not depend on anything other than the configuration information in the object.
+For example, in Android, this is similar to placing an `ImageView` with your logo. The logo is not going to change during runtime, so use a StatelessWidget in Flutter.
+
+
+> If you want to dynamically change the UI based on data received after making an HTTP call or user interaction then you have to work with `StatefulWidget` and tell the Flutter framework that the widget’s State has been updated so it can update that widget.
+
+
+> The important thing to note here is at the core both stateless and stateful widgets behave the same. They rebuild every frame, the difference is the StatefulWidget has a State object that stores state data across frames and restores it.
