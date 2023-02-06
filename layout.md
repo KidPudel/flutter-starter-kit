@@ -129,3 +129,21 @@ body: Column(
           ],
         )
 ```
+![image](https://user-images.githubusercontent.com/63263301/217007869-9479a8bc-7cb2-4c52-aeba-52d7fa037680.png)
+
+And now you can position your elements inside, however you want:  
+
+```dart
+Expanded(flex: 1, child: Container(
+              color: Colors.cyan,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: const [
+                  Text("data"),
+                ],
+              ),
+            ),),
+```
+
+![image](https://user-images.githubusercontent.com/63263301/217008427-d1098ec0-ea32-440c-a40e-217a58df7bea.png)
