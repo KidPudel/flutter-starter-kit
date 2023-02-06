@@ -2,7 +2,7 @@
 In Android, the `View` is the foundation of everything that shows up on the screen. Buttons, toolbars, and inputs, everything is a View. In Flutter, the rough equivalent to a `View` is a `Widget`.  
 `Widgets` don’t map exactly to Android views, but while you’re getting acquainted with how Flutter works you can think of them as “the way you declare and construct UI”.  
 
-Every widget defines a `build()` method that's automatically called every time the widget's circumstances change so that the widget is always up to date.
+Every widget defines a `build()` method that's **automatically called every time the widget's circumstances change so that the widget is always up to date.**
 
 # Lifespan
 However, these have a few differences to a View. To start, widgets have a different lifespan: they are _immutable and only exist **until they need to be changed**_.   
