@@ -1,0 +1,38 @@
+# How to center element?
+
+
+take this for example:  
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: const Text("data")
+    );
+  }
+```
+as a result we have:  
+![image](https://user-images.githubusercontent.com/63263301/216997729-321f509c-3425-44ee-a2b6-b96d5616d082.png)
+
+Yeahh... it's not good at all.  
+
+So, to center element we need Column and Row  
+
+If we add column, we can position it vertically:  
+
+```dart
+body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: const <Widget>[
+          Text("data")
+        ],
+      )
+```
+
+![image](https://user-images.githubusercontent.com/63263301/216998518-87e82625-de9b-44e3-a0f7-afe89d5866af.png)
+
+Now we need to 
