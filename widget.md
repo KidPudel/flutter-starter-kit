@@ -69,6 +69,8 @@ class SampleApp extends StatelessWidget {
   }
 }
 
+// This class is the configuration for the state. It holds the values
+// provided by the parent and used by the build method of the State.
 class SampleAppPage extends StatefulWidget {
   const SampleAppPage({super.key});
 
