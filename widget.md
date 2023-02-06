@@ -23,4 +23,4 @@ For example, in Android, this is similar to placing an `ImageView` with your log
 > If you want to dynamically change the UI based on data received after making an HTTP call or user interaction then you have to work with `StatefulWidget` and tell the Flutter framework that the widget’s State has been updated so it can update that widget.
 
 
-> The important thing to note here is at the core both stateless and stateful widgets behave the same. They rebuild every frame, the difference is the StatefulWidget has a State object that stores state data across frames and restores it.
+> The important thing to note here is at the core both `stateless` and `stateful` widgets behave the same. They rebuild every frame, the difference is the StatefulWidget has a State object that stores state data across frames and restores it.
