@@ -61,14 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
   
-  // build is the method that basically builds this widget
-  // Describes the part of the UI represented by this widget
-  // framework calls this method in a number of different situations. For example:
-  // - After calling initState.
-  // - After calling didUpdateWidget.
-  // - After receiving a call to setState.
-  // - After a dependency of this State object changes (e.g., an InheritedWidget referenced by the previous build changes).
-  // - After calling deactivate and then reinserting the State object into the tree at another location.
+ 
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
