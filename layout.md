@@ -147,3 +147,16 @@ Expanded(flex: 1, child: Container(
 ```
 
 ![image](https://user-images.githubusercontent.com/63263301/217008427-d1098ec0-ea32-440c-a40e-217a58df7bea.png)
+
+
+# Center widget
+
+also you can simply use `Center`:  
+
+```dart
+body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: <Widget>[
+```
