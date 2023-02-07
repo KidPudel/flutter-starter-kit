@@ -41,6 +41,10 @@ For example, in Android, this is similar to placing an `ImageView` with your log
 
 **_if a widget changes (because of user interactions, for example) it’s stateful. However, if a widget reacts to change, the containing parent widget can still be stateless if it doesn’t itself react to change._**
 
+## Example
+
+Until now, `MyAppState` covered all your state needs. That's why all the widgets you have written so far are stateless. They don't contain any mutable state of their own. None of the widgets can change itself—they must go through MyAppState.
+
 ---
 
 The following example shows how to use a StatelessWidget. A common StatelessWidget is the Text widget. If you look at the implementation of the Text widget you’ll find that it subclasses StatelessWidget.
