@@ -4,6 +4,16 @@ In Android, the `View` is the foundation of everything that shows up on the scre
 
 Every widget defines a `build()` method that's **automatically called every time the widget's circumstances change so that the widget is always up to date.**
 
+build is the method that basically builds this widget
+framework calls this method in a number of different situations. For example:
+- After calling initState.
+- After calling didUpdateWidget.
+- After receiving a call to setState.
+- After a dependency of this State object changes (e.g., an InheritedWidget referenced by the previous build changes).
+- After calling deactivate and then reinserting the State object into the tree at another location.
+
+`BuildContext` - Describes the part of the UI represented by this widget
+
 # Lifespan
 However, these have a few differences to a View. To start, widgets have a different lifespan: they are _immutable and only exist **until they need to be changed**_.   
 Whenever widgets or their state change, Flutter’s framework creates a new tree of widget instances.   
