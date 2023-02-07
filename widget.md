@@ -4,8 +4,8 @@ In Android, the `View` is the foundation of everything that shows up on the scre
 
 Every widget defines a `build()` method that's **automatically called every time the widget's circumstances change so that the widget is always up to date.**
 
-build is the method that basically builds this widget  
-Describes the part of the UI represented by this widget 
+build is the method that basically builds this widget.  
+Describes the part of the UI represented by this widget.  
 framework calls this method in a number of different situations. For example:
 - After calling initState.
 - After calling didUpdateWidget.
