@@ -1,5 +1,8 @@
 Basic concepts in Android development and their equivalent concepts in Flutter:
 
+**Flutter uses Composition over Inheritance whenever it can. Here, instead of padding being an attribute of Text, it's a widget!
+This way, widgets can focus on their single responsibility, and you, the developer, have total freedom in how to compose your UI. For example, you can use the Padding widget to pad text, images, buttons, your own custom widgets, or the whole app. The widget doesn't care what it's wrapping.**
+
 1. `Activity` (Android) vs `StatefulWidget` (Flutter) - Both represent a single screen in an app, with the ability to update the UI based on user interactions or other events.
 
 2. `Fragment` (Android) vs `StatefulWidget` (Flutter) - Both represent a portion of a screen in an app, which can be reused across multiple activities.
