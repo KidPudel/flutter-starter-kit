@@ -2,9 +2,6 @@
 
 
 - data - data layer. This layer, for example, describes the work with external API.
-- 
 - domain - the layer of business logic.
-- 
 - internal - application layer. This layer is where dependencies are implemented.
-- 
 - presentation - the presentation layer. This layer is where we describe the UI of the application.
