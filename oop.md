@@ -31,7 +31,7 @@ class Spacecraft {
 }
 ```
 
-You might use the Spacecraft class like this:
+You might use the `Spacecraft` class like this:
 
 
 ```dart
