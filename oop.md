@@ -1,4 +1,4 @@
-# Class
+# Classes and constructors
 
 ```dart
 class Spacecraft {
@@ -40,6 +40,30 @@ voyager.describe();
 
 var voyager3 = Spacecraft.unlaunched('Voyager III');
 voyager3.describe();
+```
+
+# Abstract classes
+abstract class is a class _that cannot be instantiated directly_, but _can be used as a base class for other classes_.   
+Abstract classes are defined using the `abstract` keyword in the class declaration.
+
+Abstract classes _are used to define a common interface_ for a group of related classes.
+
+```dart
+abstract class Animal {
+  void makeSound();
+}
+
+class Cat implements Animal {
+  void makeSound() {
+    print('Meow!');
+  }
+}
+
+class Dog implements Animal {
+  void makeSound() {
+    print('Woof!');
+  }
+}
 ```
 
 # Enums
@@ -97,6 +121,37 @@ Therefore, you can implement _any_ class by using `implements` instead of `exten
 class MockSpaceship implements Spacecraft {
   // ···
 }
+```
+
+# Singleton class
+
+## factory constructor
+
+factory constructor, which is a special **_type of constructor that returns an instance of a class_**. Unlike a regular constructor, which always returns a new instance of the class, _a `factory` constructor can return an instance of a different class, or even a previously created instance of the same class_.
+
+```dart
+class MySingleton {
+  static final MySingleton _singleton = MySingleton._internal();
+  
+  factory MySingleton() {
+    return _singleton;
+  }
+  
+  MySingleton._internal();
+  
+  void sayHello() {
+    print('Hello, world!');
+  }
+}
+
+void main() {
+  var mySingleton = MySingleton();
+  mySingleton.sayHello(); // prints 'Hello, world!'
+
+  var myOtherSingleton = MySingleton();
+  print(mySingleton == myOtherSingleton); // prints 'true'
+}
+
 ```
 
 
