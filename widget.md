@@ -121,3 +121,9 @@ class _SampleAppPageState extends State<SampleAppPage> {
   }
 }
 ```
+
+# Inherited Widget
+Inherited widgets lets you access state from way above in the widget tree
+
+![image](https://user-images.githubusercontent.com/63263301/219377591-e13dae2d-42b6-4a3e-8461-daf5f363df64.png)
+
