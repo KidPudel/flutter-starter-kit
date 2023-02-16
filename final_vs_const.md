@@ -16,6 +16,8 @@ print(a); // prints the current year (e.g., 2023)
 print(b); // prints 2022
 ```
 
+> In Dart/Flutter, you can use `final` to declare instance variables, **_but for class-level variables, you need to use the `static const` keywords_**.
+
 # Compare to Kotlin
 
 In Kotlin, the val and const `val` keywords are used to declare variables that cannot be reassigned once they are initialized. The `val` keyword is similar to `final` in Flutter/Dart, while `const val` is similar to `const`.
