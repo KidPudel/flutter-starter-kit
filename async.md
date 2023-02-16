@@ -52,7 +52,7 @@ The output will be:
 Before calling longRunningTask
 Task started
 After calling longRunningTask
-```
 Task completed
+```
 As you can see, the execution of the calling code is not blocked, and the message "After calling longRunningTask" is printed before the task completes.
 
