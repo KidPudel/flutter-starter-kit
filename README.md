@@ -13,7 +13,7 @@ lookup for flutter world 🍃
 # [Clean architecture](https://github.com/KidPudel/flutter-starter-kit/blob/main/clean_architecture.md)
 # [Android vs Flutter](https://github.com/KidPudel/flutter-starter-kit/blob/main/concepts-android-vs-flutter.md)
 # [final vs const](https://github.com/KidPudel/flutter-starter-kit/blob/main/final_vs_const.md)
-# [asynchronious](https://github.com/KidPudel/flutter-starter-kit/blob/main/async.md)
+# [asynchronous](https://github.com/KidPudel/flutter-starter-kit/blob/main/async.md)
 
 
 
