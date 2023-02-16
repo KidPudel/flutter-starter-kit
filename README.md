@@ -8,6 +8,11 @@ lookup for flutter world 🍃
 # [Widgets](https://github.com/KidPudel/flutter-starter-kit/blob/main/widget.md)
 # [SafeArea](https://github.com/KidPudel/flutter-starter-kit/blob/main/safe_area.md)
 # [NavigationRail](https://github.com/KidPudel/flutter-starter-kit/blob/main/navigation_rail.md)
+# [OOP](https://github.com/KidPudel/flutter-starter-kit/blob/main/oop.md)
+# [callback vs arrow](https://github.com/KidPudel/flutter-starter-kit/blob/main/callback_vs_arrow.md)
+# [Clean architecture](https://github.com/KidPudel/flutter-starter-kit/blob/main/clean_architecture.md)
+# [Android vs Flutter](https://github.com/KidPudel/flutter-starter-kit/blob/main/concepts-android-vs-flutter.md)
+# [final vs const](https://github.com/KidPudel/flutter-starter-kit/blob/main/final_vs_const.md)
 
 
 
