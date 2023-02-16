@@ -31,6 +31,17 @@ class Spacecraft {
 }
 ```
 
+You might use the Spacecraft class like this:
+
+
+```dart
+var voyager = Spacecraft('Voyager I', DateTime(1977, 9, 5));
+voyager.describe();
+
+var voyager3 = Spacecraft.unlaunched('Voyager III');
+voyager3.describe();
+```
+
 # Enums
 Enums are a way of enumerating a predefined set of values or instances in a way which ensures that there cannot be any other instances of that type.
 
