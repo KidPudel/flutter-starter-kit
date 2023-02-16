@@ -36,15 +36,50 @@ Enums are a way of enumerating a predefined set of values or instances in a way 
 
 Here is an example of a simple enum that defines a simple list of predefined planet types:
 
-`enum PlanetType { terrestrial, gas, ice }`
+```dart
+enum PlanetType { terrestrial, gas, ice }
+```
+
+# Inheritance
+Dart has single inheritance.
+
+```dart
+class Orbiter extends Spacecraft {
+  double altitude;
+
+  Orbiter(super.name, DateTime super.launchDate, this.altitude);
+}
+```
+
+
+# Mixins
+Mixins are a way of reusing code in multiple class hierarchies. The following is a mixin declaration:
+
+```dart
+mixin Piloted {
+  int astronauts = 1;
+
+  void describeCrew() {
+    print('Number of astronauts: $astronauts');
+  }
+}
+```
+
+To add a mixin’s capabilities to a class, just extend the class with the mixin.
+
+```dart
+class PilotedCraft extends Spacecraft with Piloted {
+  // ···
+}
+```
+
+
+PilotedCraft now has the astronauts field as well as the `describeCrew()` method.
 
 # Interface
 
 Dart has **no interface keyword**. Instead, **all classes implicitly define an interface**.  
 Therefore, you can implement _any_ class by using `implements` instead of `extends`.
-
-
-
 
 
 ```dart
