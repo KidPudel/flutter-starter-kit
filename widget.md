@@ -157,4 +157,18 @@ For example, you can use it to store constants across your program.
    }
    ```
 3. is use our constants
-   
+   ```dart
+     @override
+     Widget build(BuildContext context) {
+       var constants = Constants.of(context);
+       return MaterialApp(
+         theme: ThemeData().copyWith(
+           colorScheme: ThemeData()
+               .colorScheme
+               .copyWith(primary: constants?.spanishLavender, secondary: constants?.selectiveYellow),
+         ),
+         home: Home(),
+       );
+     }
+   }
+   ```
