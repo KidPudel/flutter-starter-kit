@@ -127,3 +127,34 @@ Inherited widgets lets you access state from way above in the widget tree
 
 ![image](https://user-images.githubusercontent.com/63263301/219377591-e13dae2d-42b6-4a3e-8461-daf5f363df64.png)
 
+For example, you can use it to store constants across your program.  
+1. is to create Inherited widget, to wrap your whole app with
+   ```dart
+   class Constants extends InheritedWidget {
+     final String url = "http:/192.168.1.8:8080";
+     final Color spanishLavender = const Color.fromARGB(255, 73, 43, 131);
+     final Color selectiveYellow = const Color.fromARGB(255, 249, 182, 26);
+     final Color bakerMilkPink = const Color.fromARGB(255, 255, 153, 187);
+     final Color lightCyan = const Color.fromARGB(255, 215, 255, 255);
+   
+     const Constants({required Widget child, super.key}) : super(child: child);
+   
+     static Constants? of(BuildContext context) =>
+         context.dependOnInheritedWidgetOfExactType<Constants>();
+   
+     @override
+     bool updateShouldNotify(InheritedWidget oldWidget) => true;
+   }
+   ```
+2. is to wrap
+   ```dart
+   void main() {
+     runApp(
+       Constants(
+         child: Application(),
+       ),
+     );
+   }
+   ```
+3. is use our constants
+   
