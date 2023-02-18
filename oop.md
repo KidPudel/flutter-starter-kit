@@ -122,6 +122,15 @@ class MockSpaceship implements Spacecraft {
   // ···
 }
 ```
+creating interfaces for repositories is a common practice in software development. Here are some reasons why:
+
+- Abstraction: By creating an interface for a repository, you are abstracting away the implementation details of the repository. This allows you to switch out the actual implementation of the repository without affecting the rest of the code that depends on it.
+
+- Testability: When you create an interface for a repository, you can easily mock the repository in your unit tests. This allows you to test your code in isolation without having to depend on the actual implementation of the repository.
+
+- Separation of Concerns: By creating an interface for a repository, you are separating the responsibilities of the repository from the rest of your code. This makes your code more modular and easier to maintain.
+
+- Dependency Injection: If you are using a dependency injection framework like Dagger or Koin, creating an interface for a repository makes it easier to inject the repository into your code.
 
 # Singleton class
 
