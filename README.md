@@ -14,6 +14,7 @@ lookup for flutter world 🍃
 ### [final vs const](https://github.com/KidPudel/flutter-starter-kit/blob/main/final_vs_const.md)
 ### [asynchronous](https://github.com/KidPudel/flutter-starter-kit/blob/main/async.md)
 ### [named parameters](https://github.com/KidPudel/flutter-starter-kit/blob/main/named_parameters.md)
+### [copyWith](https://github.com/KidPudel/flutter-starter-kit/blob/main/copy_with.md)
 # OOP
 ### [OOP](https://github.com/KidPudel/flutter-starter-kit/blob/main/oop.md)
 ### [global](https://github.com/KidPudel/flutter-starter-kit/blob/main/global.md)
