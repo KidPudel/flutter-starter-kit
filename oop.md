@@ -162,6 +162,6 @@ void main() {
 }
 
 ```
-
+_singleton is the single instance that is being create with the _internal named constructor and that the factory method returns this single instance_.
 
 more info here -> [INFO](https://dart.dev/samples)
