@@ -24,3 +24,4 @@ SafeArea(
     ),
   ),
 ```
+More about navigation [here](https://docs.flutter.dev/development/ui/navigation)
