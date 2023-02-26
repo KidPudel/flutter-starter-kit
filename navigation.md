@@ -48,3 +48,23 @@ Because `Navigator` keeps a stack of `Route` objects (representing the history s
 
 # GestureDetector
 maybe you need to make some part of your app clickable, well here is [GestureDetector](https://docs.flutter.dev/cookbook/gestures/handling-taps)
+
+```dart
+  return GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) => DetailsScreen(
+                                name: characters.data
+                                        ?.elementAt(index)
+                                        .fullName ??
+                                    "error",
+                              ),
+                            ),
+                          );
+                        },
+                        child: Card(
+                          child: Container(
+                            decoration: boxDecoration(
+                            .............................
+```
