@@ -7,7 +7,7 @@ lookup for flutter world 🍃
 ### [Layout](https://github.com/KidPudel/flutter-starter-kit/blob/main/layout.md)
 ### [Widgets](https://github.com/KidPudel/flutter-starter-kit/blob/main/widget.md)
 ### [SafeArea](https://github.com/KidPudel/flutter-starter-kit/blob/main/safe_area.md)
-### [NavigationRail](https://github.com/KidPudel/flutter-starter-kit/blob/main/navigation_rail.md)
+### [Navigation](https://github.com/KidPudel/flutter-starter-kit/blob/main/navigation.md)
 ### [callback vs arrow](https://github.com/KidPudel/flutter-starter-kit/blob/main/callback_vs_arrow.md)
 ### [Clean architecture](https://github.com/KidPudel/flutter-starter-kit/blob/main/clean_architecture.md)
 ### [Android vs Flutter](https://github.com/KidPudel/flutter-starter-kit/blob/main/concepts-android-vs-flutter.md)
@@ -15,6 +15,7 @@ lookup for flutter world 🍃
 ### [asynchronous](https://github.com/KidPudel/flutter-starter-kit/blob/main/async.md)
 ### [named parameters](https://github.com/KidPudel/flutter-starter-kit/blob/main/named_parameters.md)
 ### [copyWith](https://github.com/KidPudel/flutter-starter-kit/blob/main/copy_with.md)
+### [FutureBuild](https://github.com/KidPudel/flutter-starter-kit/blob/main/future_build.md)
 # OOP
 ### [OOP](https://github.com/KidPudel/flutter-starter-kit/blob/main/oop.md)
 ### [global](https://github.com/KidPudel/flutter-starter-kit/blob/main/global.md)
