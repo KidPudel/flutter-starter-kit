@@ -30,3 +30,19 @@ return Scaffold(
     )
 )
 ```
+
+but for some widgets like switch flutter have something better - `.adaptive`
+```dart
+return Scaffold(
+    body: Center(
+        child: Switch.adaptive(
+                value: isReady,
+                onChanged: (newValue) {
+                    setState((){
+                        isReady = newValue;
+                    })
+                }
+            ),
+    )
+)
+```
