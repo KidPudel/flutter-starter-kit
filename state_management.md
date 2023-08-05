@@ -42,6 +42,11 @@ class _CharacterListScreenState extends State<CharacterListScreen> {
 
 
 # Flutter Bloc Approach
+For a Dart application:
+`bloc: ^8.0.0`
+For a Flutter application:
+`flutter_bloc: ^8.0.0`
+
 ```dart
 class CharacterBloc extends Bloc<CharacterEvent, CharacterState> {
   CharacterBloc() : super(CharacterLoadingState());
