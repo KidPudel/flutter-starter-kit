@@ -83,18 +83,24 @@ Future<int> fetchData() async {
 }
 ```
 
-2. **`async*`:**
+2. **`async*`** generates async data
    - `async*` is used to mark a function as an asynchronous generator, which allows it to produce a stream of values over time.
    - An `async*` function returns a `Stream` (or `Stream<T>` for a specific type `T`) instead of a `Future`.
-   - Inside an `async*` function, you use `yield` statements to emit values to the stream. The function's execution is paused only at `yield` statements, not at `await` expressions.
+   - Inside an `async*` function, you use `yield` statements to emit (push) values/data to the stream. The function's execution is paused only at `yield` statements, not at `await` expressions.
    - Unlike `async`, `async*` functions do not return a single value; they produce a sequence of values over time, making them suitable for streaming data or producing large datasets incrementally.
 
 Example:
 ```dart
-Stream<int> countNumbers() async* {
+Stream<int> boatStream() async* {
   for (int i = 1; i <= 5; i++) {
     await Future.delayed(Duration(seconds: 1)); // This is allowed but not necessary
     yield i;
+  }
+}
+void main() async {
+  Stream<int> stream = boatStream();
+  stream.listen(receivedData)) {
+    print(receivedData.toString())
   }
 }
 ```
