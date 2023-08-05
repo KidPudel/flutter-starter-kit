@@ -102,6 +102,7 @@ void main() async {
 
 ## Usecase between cubit and bloc
 When to use cubit?  
-- Example with increment button, why would you need bloc with its stream listening? It's like a buldoser for digging a 10 centemeters hole, you just can use a showel, cubit.  
+- Example with increment button, why would you need bloc with its stream listening? It's like a buldoser for digging a 10 centemeters hole, you just can use a showel, cubit.
+
 When to use bloc?  
 - Example with weather app, you search for locations and tap each letter, cubit would be looking each time you change it for locations, bloc is a listener so it could call it every 4 words or 2 seconds or when we stop tapping, we can easily manage it in a stream.
