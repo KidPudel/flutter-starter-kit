@@ -46,3 +46,9 @@ return Scaffold(
     )
 )
 ```
+# Other adaptive widgets
+- `Switch.adaptive()`
+- `SwitchListTitle.adaptive()`
+- `Slider.adaptive()`
+- `CircularProgressIndicator.adapter()`
+- `Icon.adaptive().share()` or `.flip_camera()` etc
