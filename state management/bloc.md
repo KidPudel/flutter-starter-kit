@@ -14,4 +14,10 @@
       yield i;
     }
   }
+  void main() async {
+    Stream<int> stream = boatStream();
+    stream.listen(receivedData)) {
+      print(receivedData.toString())
+    }
+  }
   ```
