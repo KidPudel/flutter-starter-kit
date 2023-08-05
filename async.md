@@ -65,3 +65,36 @@ Task completed
 ```
 As you can see, the execution of the calling code is not blocked, and the message "After calling longRunningTask" is printed before the task completes.
 
+# Stream and `async*`
+In summary, `async` is used to define a function that performs asynchronous operations and returns a _**single `Future` result**_. On the other hand, `async*` is used to define a function that _**produces a stream of values over time using `yield` statements**_, and it returns a `Stream`.
+
+The main difference between `async` and `async*` is function they represent and how they handle asynchronous operations.
+
+1. **`async`:**
+   - `async` is used to mark a function as asynchronous, meaning it may contain `await` expressions to wait for asynchronous operations to complete.
+   - An `async` function returns a `Future` that represents the result of the computation. The `Future` can resolve to a single value, an error, or nothing (`void`).
+   - You can use `await` inside an `async` function to pause its execution until an asynchronous operation, such as a network call or file read, is complete. The `await` keyword ensures that the function resumes from that point once the awaited operation finishes.
+
+Example:
+```dart
+Future<int> fetchData() async {
+  await Future.delayed(Duration(seconds: 2)); // Simulate an async operation
+  return 42;
+}
+```
+
+2. **`async*`:**
+   - `async*` is used to mark a function as an asynchronous generator, which allows it to produce a stream of values over time.
+   - An `async*` function returns a `Stream` (or `Stream<T>` for a specific type `T`) instead of a `Future`.
+   - Inside an `async*` function, you use `yield` statements to emit values to the stream. The function's execution is paused only at `yield` statements, not at `await` expressions.
+   - Unlike `async`, `async*` functions do not return a single value; they produce a sequence of values over time, making them suitable for streaming data or producing large datasets incrementally.
+
+Example:
+```dart
+Stream<int> countNumbers() async* {
+  for (int i = 1; i <= 5; i++) {
+    await Future.delayed(Duration(seconds: 1)); // This is allowed but not necessary
+    yield i;
+  }
+}
+```
