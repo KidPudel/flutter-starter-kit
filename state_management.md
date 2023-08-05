@@ -3,6 +3,7 @@ The data that is displayed needs to be managed in android we would you something
 In Flutter we could use `setState((){})` or `BloC` or `RiverPod` or `Provider`.
 
 # Flutter `setState()` Approach
+too messy, we need to classes and imagine if we've had 20 different states, doesn't scale very well
 ```dart
 class CharacterListScreen extends StatefulWidget {
   @override
