@@ -106,3 +106,13 @@ When to use cubit?
 
 When to use bloc?  
 - Example with weather app, you search for locations and tap each letter, cubit would be looking each time you change it for locations, bloc is a listener so it could call it every 4 words or 2 seconds or when we stop tapping, we can easily manage it in a stream.
+
+
+# Widget components 
+1. `BlocProvider`: This component is responsible for providing the BLoC instances to the widget tree below it. It acts as the top-level entry point for the BLoC hierarchy. With BlocProvider, you can inject BLoC instances into different parts of your app and share the same instance throughout the widget tree.
+
+2. `BlocBuilder`: `BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
+
+3. `BlocListener`: Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in a BLoC's state. However, instead of rebuilding its child widget, it invokes a callback function whenever the state changes. This is useful when you need to perform side effects or actions based on certain state changes, such as showing a snackbar or navigating to a new screen.
+
+Using these components together, you can effectively implement the BLoC pattern in your Flutter application, promoting better separation of concerns and improved maintainability.
