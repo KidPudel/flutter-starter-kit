@@ -29,42 +29,8 @@ And sometimes we want a data when we decide, then `Future` and `async` is suitab
 ## Cubit and Bloc
 Cubit is a small/minimal part of bloc (bloc **extends** cubit)
 ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/1ab7eb83-a070-475b-9ee4-bcad922f98cf)
-Cubit is a streaming component that has functions that are called from UI and handles it and emits the result
-```dart
-class CounterCubit extends Cubit<int> {
-  CounterCubit():super(0);
+What is cubit??
 
-  void increment(state) => emit(state + 1);
-  void decrement(state) => emit(state - 1);
-}
+how cubit work
 
-void main() {
-  final cubit = CounterCubit();
-  
-  int counter = 0;
-  cubit.increment(counter);
-  cubit.decrement(counter);
-}
-```
-
-```dart
-class CounterCubit extends Cubit<int> {
-  CounterCubit():super(0);
-
-  void increment() => emit(state + 1);
-  void decrement() => emit(state - 1);
-}
-
-Future<void> main() async {
-  final cubit = CounterCubit();
-
-  final streamSubscription = cubit.stream.listen(print);
-
-  cubit.increment();
-  cubit.decrement();
-  cubit.decrement();
-  
-  await Future.delayed(Duration.zero);
-  await cubit.close();
-}
-```
+how cubit acts as a stream
