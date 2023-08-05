@@ -52,3 +52,21 @@ return Scaffold(
 - `Slider.adaptive()`
 - `CircularProgressIndicator.adapter()`
 - `Icon.adaptive().share()` or `.flip_camera()` etc
+
+
+# Whole adaptive app
+Instead of `Scaffold` you can use `PlatformScaffold` from `flutter_platform_widgets: ^1.2.0`
+and istead of MaterialApp in MyApp
+```dart
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  // This widget is the root of your application.
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+```
+
+use `PlatformApp()` that has `material` and `cupertino` properties
