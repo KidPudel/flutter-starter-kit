@@ -180,11 +180,11 @@ floatingActionButton: FloatingActionButton(
 
 ## `BlocBuilder`: listens to the events and rebuild
 Is listener to changes and rebuilds UI  
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/0cf904fb-45d0-431d-b012-6d906e7f116f)  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/0cf904fb-45d0-431d-b012-6d906e7f116f" alt="accessiblity" width="500"></img>  
 
 ### Best practice
 rebuilding a big part of the UI is expensive, so it is best to wrap a small part that is necessary  
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/5750c9f1-4924-4bf6-9843-0c3fc5cde643)  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/5750c9f1-4924-4bf6-9843-0c3fc5cde643" alt="accessiblity" width="500"></img>  
 ```dart
 Column(
     mainAxisAlignment: MainAxisAlignment.center,
@@ -199,7 +199,22 @@ Column(
     ]
 )
 ```
-
+Also you can use conditions like that:
+```dart
+BlocBuilder<BoatsCubit, BoatsState>(builder: (context, state) {
+    if (state.boatsSent < 0) {
+        return Text(
+            'oh no, we have ${state.boatsSent} boats sent, we need to catch up',
+            style: Theme.of(context).textTheme.headlineMedium,
+        );
+    else {
+          return Text(
+              'oh no, we have ${state.boatsSent} boats sent, we need to catch up',
+              style: Theme.of(context).textTheme.headlineMedium,
+        );
+    }   
+}),
+```
 
 ---
 
