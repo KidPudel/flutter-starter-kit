@@ -172,3 +172,17 @@ For example, you can use it to store constants across your program.
      }
    }
    ```
+
+# Helpful widgets
+- `Column`
+- `Row`
+- `ListView.builder`
+- `FutureBuilder`
+- `Container`
+- `BoxDecoration`
+- `GestureDetector`
+- `Padding`
+- `SizedBox`
+- `Button`
+- `Explanded`
+- `Flexible`
