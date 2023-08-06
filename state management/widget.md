@@ -174,6 +174,7 @@ For example, you can use it to store constants across your program.
    ```
 
 # Helpful widgets
+- `SafeArea` it pads a child to match a space area
 - `Column`
 - `Row`
 - `Stack`
