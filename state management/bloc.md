@@ -230,4 +230,21 @@ Using these components together, you can effectively implement the BLoC pattern 
 
 ## `BlocConsumer`: Combination of `BlocBuilder` and `BlocListener`
 ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/ed3674bb-b475-4136-a7d3-1782539c65e0)  
-
+```dart
+child: BlocConsumer<BoatsCubit, BoatsState>(
+                builder: (context, boatsState) {
+                  return Text(
+                    '${boatsState.boatsSent}',
+                    style: Theme.of(context).textTheme.headlineMedium,
+                  );
+                },
+                listener: (context, boatsState) {
+                  if (boatsState.boatsSent > 2) {
+                    ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                      content: Text('great'),
+                      duration: Duration(milliseconds: 500),
+                    ));
+                  }
+                },
+              ),
+```
