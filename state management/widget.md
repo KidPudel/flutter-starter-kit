@@ -176,6 +176,7 @@ For example, you can use it to store constants across your program.
 # Helpful widgets
 - `Column`
 - `Row`
+- `Stack`
 - `ListView.builder`
 - `FutureBuilder`
 - `Container`
