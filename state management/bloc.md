@@ -27,8 +27,8 @@ And sometimes we want a data when we decide, then `Future` and `async` is suitab
 
 
 ## 2. Cubit and 3. Bloc
-Cubit is a small/minimal part of bloc (bloc **extends** cubit)
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/1ab7eb83-a070-475b-9ee4-bcad922f98cf)  
+Cubit is a small/minimal part of bloc (bloc **extends** cubit)  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/1ab7eb83-a070-475b-9ee4-bcad922f98cf" alt="accessiblity" width="500"></img>  
 Cubit is a streaming component that is based on functions that are called from the UI and then emits the result data in a stream
 ```dart
 import 'package:bloc/bloc.dart';
@@ -62,7 +62,8 @@ void main() async {
 ```
 
 Blocs on the other hand are more advanced, they not only emit data in stream, they are also listening to the input stream
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/0a7b384f-37f6-4975-971c-7bea7676787b)
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/0a7b384f-37f6-4975-971c-7bea7676787b" alt="accessiblity" width="500"></img>
+
 ```dart
 import 'package:bloc/bloc.dart';
 
@@ -109,10 +110,27 @@ When to use bloc?
 
 
 # Widget components 
-1. `BlocProvider`: This component is responsible for providing the BLoC instances to the widget tree below it. It acts as the top-level entry point for the BLoC hierarchy. With BlocProvider, you can inject BLoC instances into different parts of your app and share the same instance throughout the widget tree.
+> Note: all components work with cubit and bloc, because bloc is the cubit
+## `BlocProvider`
+**Bloc Provider provides a single instance of a some BloC class (that is lazy by default to create only when asked and closing block automatically) to all of Bloc Providers Widget children.**  
 
-2. `BlocBuilder`: `BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
+This component is responsible for providing the BLoC instances to the widget tree below it. It acts as the top-level entry point for the BLoC hierarchy. With BlocProvider, you can inject BLoC instances into different parts of your app and share the same instance throughout the widget tree.
+### Accessibility
+**Bloc instance will only available to the its bloc provider children that has information in BuildContext**  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/754144f3-c7a0-4b01-b552-e0f5e64f9ab6" alt="accessiblity" width="500"></img>  
+**To access bloc use BuildContext**  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/274099d7-f5c1-419f-abbe-4e966dda2b6f" alt="accessiblity" width="500"></img>  
+**lazy by default to create only when asked and closing block automatically**  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/f12163da-5033-419e-bdf1-9f5107d4f9cb" alt="accessiblity" width="500"></img>  
+**When a new portion of a tree is created, build context is different, so we need to add a value to the provider**  
+<img src="https://github.com/KidPudel/flutter-starter-kit/assets/63263301/9a427ced-9a09-4b3e-8c49-46a4516cc350" alt="accessiblity" width="500"></img>  
 
-3. `BlocListener`: Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in a BLoC's state. However, instead of rebuilding its child widget, it invokes a callback function whenever the state changes. This is useful when you need to perform side effects or actions based on certain state changes, such as showing a snackbar or navigating to a new screen.
+
+
+
+## `BlocBuilder`
+`BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
+
+4. `BlocListener`: Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in a BLoC's state. However, instead of rebuilding its child widget, it invokes a callback function whenever the state changes. This is useful when you need to perform side effects or actions based on certain state changes, such as showing a snackbar or navigating to a new screen.
 
 Using these components together, you can effectively implement the BLoC pattern in your Flutter application, promoting better separation of concerns and improved maintainability.
