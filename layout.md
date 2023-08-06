@@ -98,7 +98,7 @@ body: Column(
 
 ![image](https://user-images.githubusercontent.com/63263301/217005516-6e6645d8-77c7-4b73-9933-9ae1b01492db.png)
 
-use `Expanded` Widget that expands a childs of Column, Row or Flex, so that the child fills all the available space.
+use `Expanded` Widget or `Flexible` with its flex that expands a childs of `Column`, `Row` or `Flexible`, so that the child fills all the available space.
 
 
 ```dart
