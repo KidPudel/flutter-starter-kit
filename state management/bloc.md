@@ -111,7 +111,7 @@ When to use bloc?
 
 # Widget components 
 > Note: all components work with cubit and bloc, because bloc is the cubit
-## `BlocProvider`
+## `BlocProvider`: widget that nests and lets access a bloc/cubit in a tree and sends a stream of data
 **Bloc Provider provides a single instance of a some BloC class (that is lazy by default to create only when asked and closing block automatically) to all of Bloc Providers Widget children.**  
 
 This component is responsible for providing the BLoC instances to the widget tree below it. It acts as the top-level entry point for the BLoC hierarchy. With BlocProvider, you can inject BLoC instances into different parts of your app and share the same instance throughout the widget tree.
@@ -175,13 +175,14 @@ floatingActionButton: FloatingActionButton(
       ),
 ```
 
+**But how do we rebuild the UI element itself?? - _Using BlocBuilder_**
 
 
-## `BlocBuilder`
+## `BlocBuilder`: listens to the events and rebuild
 Is listener to changes and rebuilds UI.  
 `BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
 
-## `BlocListener`
+## `BlocListener`: listens to the event and invoke callback
 Is listener to changes and invokes a callback functions.  
 Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in a BLoC's state. However, instead of rebuilding its child widget, it invokes a callback function whenever the state changes. This is useful when you need to perform side effects or actions based on certain state changes, such as showing a snackbar or navigating to a new screen.
 
