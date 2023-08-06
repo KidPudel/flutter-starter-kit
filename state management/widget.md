@@ -179,10 +179,12 @@ For example, you can use it to store constants across your program.
 - `ListView.builder`
 - `FutureBuilder`
 - `Container`
+- `Card`
 - `BoxDecoration`
 - `GestureDetector`
 - `Padding`
 - `SizedBox`
 - `Button`
-- `Explanded`
+- `Explanded` - to make a child widget take up the remaining available space along the main axis.
 - `Flexible`
+- `ClipRRect` - to round an image
