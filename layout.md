@@ -19,9 +19,9 @@ as a result we have:
 
 Yeahh... it's not good at all.  
 
-So, to center element we need Column and Row  
+So, to center element we need `Column` and Row  
 
-If we add column, we can position it vertically:  
+If we add `column`, we can position it vertically:  
 
 ```dart
 body: Column(
@@ -35,7 +35,7 @@ body: Column(
 
 ![image](https://user-images.githubusercontent.com/63263301/216998518-87e82625-de9b-44e3-a0f7-afe89d5866af.png)
 
-Now we need to add row:  
+Now we need to add `row` or `expanded`, if you want to work with some row then yeah:  
 
 ```dart
 body: Column(
@@ -55,7 +55,7 @@ body: Column(
 
 ![image](https://user-images.githubusercontent.com/63263301/216999277-b167b406-82b5-4cd2-a29d-e3ccb2d8de4a.png)
 
-But we're not done, because if we have couple of objects and if want to move just parts of childer around, we have a problems:
+here we can move the whole rows around, and to move text in rows we need or expand it like with flex 1:
 
 ```dart
 body: Column(
