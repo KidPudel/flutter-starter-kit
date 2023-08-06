@@ -118,3 +118,23 @@ Also you can animate padding values, border, eleveation etc
 ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/9b9a82d7-00c3-4cbc-982a-ea5c61433326)
 
 # Build-in explicit animations
+Explicit animations gives you more controll.  
+we could do something with AnimatedContainer and Transform, but it would turn and then stop...  
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/2cc6bd14-2f66-4a2c-9f46-ce268aa37712)
+With explicit widgets we have controll of a time, for that we need `AnimationController`  
+`AnimationController` handles checking for ticks and gives us useful controlls of over what our animation doing.  
+Since `AnimationController` also has its own state, we need to manage it with init and dispose
+```dart
+@override
+void initState() {
+   super.initState()
+   _animationController = AnimationController(
+   ...
+   );
+}
+@override
+void dispose() {
+   super.dispose()
+   _animationController.dispose();
+}
+```
