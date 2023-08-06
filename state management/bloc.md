@@ -179,7 +179,30 @@ floatingActionButton: FloatingActionButton(
 
 
 ## `BlocBuilder`: listens to the events and rebuild
-Is listener to changes and rebuilds UI.  
+Is listener to changes and rebuilds UI  
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/0cf904fb-45d0-431d-b012-6d906e7f116f)  
+
+### Best practice
+rebuilding a big part of the UI is expensive, so it is best to wrap a small part that is necessary  
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/5750c9f1-4924-4bf6-9843-0c3fc5cde643)  
+```dart
+Column(
+    mainAxisAlignment: MainAxisAlignment.center,
+    crossAxisAlignment: CrossAxisAlignment.center,
+    children: [
+        BlocBuilder<BoatsCubit, BoatsState>(builder: (context, state) {
+            return Text(
+                '${state.boatsSent}',
+                style: Theme.of(context).textTheme.headlineMedium,
+            );
+        }),
+    ]
+)
+```
+
+
+---
+
 `BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
 
 ## `BlocListener`: listens to the event and invoke callback
