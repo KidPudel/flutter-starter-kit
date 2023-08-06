@@ -221,9 +221,13 @@ BlocBuilder<BoatsCubit, BoatsState>(builder: (context, state) {
 `BlocBuilder` is a widget that listens to changes in a specific BLoC's state and rebuilds its child widget whenever the state changes. It takes a BLoC and a builder function as arguments, allowing you to update the UI based on the new state emitted by the BLoC.
 
 ## `BlocListener`: listens to the event and invoke callback
-Is listener to changes and invokes a callback functions that is called once per state, so it suitable for things like showing snackbar or navigate to the screen because again it is called once per state, so it won't be called 10 times at once, which you definitely don't want.  
+Is listener to changes and invokes a callback functions that is called _**once** per state_, so it suitable for things like showing snackbar or navigate to the screen because again it is called once per state, so it won't be called 10 times at once, which you definitely don't want.  
 ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/afbfefc7-94c4-48ea-ab63-096e1aa35c16)
 
 Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in a BLoC's state. However, instead of rebuilding its child widget, it invokes a callback function whenever the state changes. This is useful when you need to perform side effects or actions based on certain state changes, such as showing a snackbar or navigating to a new screen.
 
 Using these components together, you can effectively implement the BLoC pattern in your Flutter application, promoting better separation of concerns and improved maintainability.
+
+## `BlocConsumer`: Combination of `BlocBuilder` and `BlocListener`
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/ed3674bb-b475-4136-a7d3-1782539c65e0)  
+
