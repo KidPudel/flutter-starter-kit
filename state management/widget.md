@@ -187,6 +187,6 @@ For example, you can use it to store constants across your program.
 - `Padding`
 - `SizedBox`
 - `Button`
-- `Explanded` - to make a child widget take up the remaining available space along the main axis.
+- `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded**
 - `Flexible`
 - `ClipRRect` - to round an image
