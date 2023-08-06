@@ -177,7 +177,7 @@ For example, you can use it to store constants across your program.
 - `Column`
 - `Row`
 - `Stack`
-- `ListView.builder`
+- `ListView.builder` scrollable and created on demand (lazy)
 - `FutureBuilder`
 - `Container`
 - `Card`
