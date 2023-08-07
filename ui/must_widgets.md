@@ -46,3 +46,4 @@
 # Helpful moments
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
+- USE `ScrollController` it is supper dope!!! `.animateTo` :3
