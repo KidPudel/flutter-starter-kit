@@ -23,6 +23,7 @@
 - `AppBar`
 - `SliverAppBar`
 - `SliverToBoxAdapter` - to place a non sliver widget in sliver
+- `SliverFillRemaining`
 - `FlexibleAppBar`
 - `AnimatedFoo`
   - `AnimatedContainer` animated container that animates its children explicitly
