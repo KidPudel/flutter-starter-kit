@@ -1,5 +1,5 @@
 # Helpful widgets
-- `Scaffold` fundamental building block that provides some convenients, but you can go without it, like use `CustomScrollView`
+- `Scaffold` fundamental building block that provides some convenients, but you can go without it, like use `CustomScrollView`  
   When might you choose not to use `Scaffold`?
 
   1. **Custom Layouts:** If your app's design doesn't follow the Material Design guidelines or requires a unique layout structure, you might choose to create a custom layout using other widgets.
