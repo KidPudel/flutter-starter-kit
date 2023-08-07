@@ -33,7 +33,7 @@
 - `GestureDetector`
 - `Padding`
   - `SliverPadding`
-- `SizedBox` - to set exact size (like height and width)
+- `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Button`
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
