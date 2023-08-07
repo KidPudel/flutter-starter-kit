@@ -22,7 +22,7 @@
 - `CustomScrollView` -  when you need to create custom scroll effects or complex scrollable layouts using multiple slivers, and you want more control over the scroll behavior and UI appearance.
 - `AppBar`
 - `SliverAppBar`
-- `SliverToBoxAdapter` - to place a non slive widget in slive
+- `SliverToBoxAdapter` - to place a non sliver widget in sliver
 - `FlexibleAppBar`
 - `AnimatedFoo`
   - `AnimatedContainer` animated container that animates its children explicitly
@@ -40,6 +40,7 @@
 - `MediaQuery` establishes a subtree in which media query resolves to the given data (like to learn the size of the current media)
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
 - `ClipRRect` - to round an image
+- `PreferredSize` - advertises the preferred size which can be used by parent
 
 # Helpful moments
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
