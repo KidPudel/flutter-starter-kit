@@ -43,6 +43,7 @@
 - `ClipRRect` - to round an image
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `GestureDetector`
+- `Visibility`
 
 # Helpful moments
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
