@@ -1,4 +1,4 @@
-# Helpful widgets
+# Must-have widgets
 - `Scaffold` fundamental building block that provides some convenients, but you can go without it, like use `CustomScrollView`  
   When might you choose not to use `Scaffold`?
 
