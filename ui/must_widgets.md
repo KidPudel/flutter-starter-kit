@@ -40,3 +40,6 @@
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
 - `ClipRRect` - to round an image
 
+# Helpful moments
+- Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
+- `BoxClip.cover` - as small as possible while still covering entiring target box
