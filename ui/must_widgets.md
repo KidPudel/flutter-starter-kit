@@ -22,6 +22,7 @@
 - `CustomScrollView` -  when you need to create custom scroll effects or complex scrollable layouts using multiple slivers, and you want more control over the scroll behavior and UI appearance.
 - `AppBar`
 - `SliverAppBar`
+- `SliverToBoxAdapter` - to place a non slive widget in slive
 - `FlexibleAppBar`
 - `AnimatedFoo`
   - `AnimatedContainer` animated container that animates its children explicitly
