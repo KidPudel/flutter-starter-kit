@@ -175,10 +175,12 @@ For example, you can use it to store constants across your program.
 
 # Helpful widgets
 - `SafeArea` it pads a child to match a space area
-- `Column`
+- `Column` - when you want a simple vertical layout without scrolling.
 - `Row`
 - `Stack`
-- `ListView.builder` scrollable and created on demand (lazy)
+- `ListView` scrollable, when you have a large list of items that need to be scrollable
+  - `.builder` and created on demand (lazy)
+- `ScrollView` is used to put different or same child views or layouts and the all can be scrolled. Use `ScrollView` when you need more control over the scrolling behavior or want to create custom scrolling effects.
 - `FutureBuilder`
 - `Container`
 - `Card`
