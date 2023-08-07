@@ -44,7 +44,7 @@
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `GestureDetector`
 - `Visibility`
-- - `Divider`
+- `Divider`
 
 # Helpful moments
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
