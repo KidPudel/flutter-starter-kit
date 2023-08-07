@@ -185,7 +185,7 @@ For example, you can use it to store constants across your program.
 - `BoxDecoration`
 - `GestureDetector`
 - `Padding`
-- `SizedBox`
+- `SizedBox` - to set exact size (like height and width)
 - `Button`
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
