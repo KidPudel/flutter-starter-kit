@@ -182,6 +182,11 @@ For example, you can use it to store constants across your program.
 - `ListView` scrollable, when you have a large list of items that need to be scrollable
   - `.builder` and created on demand (lazy)
 - `ScrollView` is used to put different or same child views or layouts and the all can be scrolled. Use `ScrollView` when you need more control over the scrolling behavior or want to create custom scrolling effects.
+- `slivers` - A sliver is a portion of a scrollable area that you can define to behave in a special way. You can use slivers to achieve custom scrolling effects, such as elastic scrolling.
+- `CustomScrollView` -  when you need to create custom scroll effects or complex scrollable layouts using multiple slivers, and you want more control over the scroll behavior and UI appearance.
+- `AnimatedFoo`
+  - `AnimatedContainer` animated container that animates its children explicitly
+- `FooTransition`
 - `FutureBuilder`
 - `Container`
 - `Card`
