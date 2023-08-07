@@ -174,6 +174,7 @@ For example, you can use it to store constants across your program.
    ```
 
 # Helpful widgets
+- `Scaffold` fundamental building block that provides some convenients, but you can go without it, like use `CustomScrollView`
 - `SafeArea` it pads a child to match a space area
 - `Column` - when you want a simple vertical layout without scrolling.
 - `Row`
