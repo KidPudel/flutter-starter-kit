@@ -38,7 +38,7 @@ body: Column(
 
 ![image](https://user-images.githubusercontent.com/63263301/216998518-87e82625-de9b-44e3-a0f7-afe89d5866af.png)
 
-Now we need to add `row` or `expanded`, if you want to work with some row then yeah:  
+Now we need to add `row`
 
 ```dart
 body: Column(
