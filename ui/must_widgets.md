@@ -36,6 +36,7 @@
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Button`
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
+- `MediaQuery` establishes a subtree in which media query resolves to the given data (like to learn the size of the current media)
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
 - `ClipRRect` - to round an image
 
