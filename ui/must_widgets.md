@@ -67,3 +67,4 @@
 - USE `ScrollController` it is supper dope!!! `.animateTo` :3
 - Spread operator, you could have a another list of items in columns, and you can go with `children: [Button(), ...anotherButtons]`
 - To check the platform just use `Platform.isAndroid` or [this](https://github.com/KidPudel/flutter-starter-kit/blob/main/platform_specific.md)
+- `Lint` plugin to show you all best practices
