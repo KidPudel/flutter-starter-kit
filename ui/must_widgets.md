@@ -59,6 +59,7 @@
 - `GoogleFonts` - `google_fonts: ^version`
 - `SelectibleText`
 - `Hero` - allows the user to focus
+- `LauncherIcon`
 
 
 # Helpful moments
