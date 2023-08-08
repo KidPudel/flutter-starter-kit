@@ -14,6 +14,7 @@
 - `Column` - when you want a simple vertical layout without scrolling.
 - `Row`
 - `Stack`
+- `Wrap` - you may have too many elements and it would just go to another line
 - `ListView` scrollable, when you have a large list of items that need to be scrollable
   - `.builder` and created on demand (lazy)
 - `ScrollView` is used to put different or same child views or layouts and the all can be scrolled. Use `ScrollView` when you need more control over the scrolling behavior or want to create custom scrolling effects.
@@ -36,8 +37,9 @@
 - `Padding`
   - `SliverPadding`
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
-- `Button`
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
+- `FittedBox` - to take a space of a parent
+- `Button`
 - `MediaQuery` establishes a subtree in which media query resolves to the given data (like to learn the size of the current media)
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
 - `ClipRRect` - to round an image
@@ -45,8 +47,15 @@
 - `GestureDetector`
 - `Visibility`
 - `Divider`
+- `RichText`
+- `IntroductionScreen`
+- `CircleAvatar`
+- `SplashScreen` - to show loading or smth
+- `SnackBar`
+
 
 # Helpful moments
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
 - USE `ScrollController` it is supper dope!!! `.animateTo` :3
+- Spread operator, you could have a another list of items in columns, and you can go with `children: [Button(), ...anotherButtons()]`
