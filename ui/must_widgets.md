@@ -58,7 +58,8 @@
 - `SnackBar`
 - `GoogleFonts` - `google_fonts: ^version`
 - `SelectibleText`
-- `Hero` - allows the user to focus
+- [`Hero`](https://www.youtube.com/watch?v=Be9UH1kXFDw&ab_channel=GoogleforDevelopers) - allows the user to focus while navigating, nice animation
+  
 - `LauncherIcon`
 - `Navigator`
 
