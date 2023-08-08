@@ -42,7 +42,7 @@
 - `Button`
 - `MediaQuery` establishes a subtree in which media query resolves to the given data (like to learn the size of the current media)
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
-- `ClipRRect` - to round an image
+- `ClipRRect` - to round a widget (but with `Container` it is preferable to use `decoration:` istead)
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `GestureDetector`
 - `Visibility`
@@ -58,4 +58,4 @@
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
 - USE `ScrollController` it is supper dope!!! `.animateTo` :3
-- Spread operator, you could have a another list of items in columns, and you can go with `children: [Button(), ...anotherButtons()]`
+- Spread operator, you could have a another list of items in columns, and you can go with `children: [Button(), ...anotherButtons]`
