@@ -62,7 +62,7 @@
   
 - `LauncherIcon`
 - `Navigator`
-- `ButtonSheet` - SHEET !!!
+- `ButtonSheet` - SHEET !!! also you can use `showButtonSheet()` and `showModalButtonSheet()`
 
 
 # Helpful moments
