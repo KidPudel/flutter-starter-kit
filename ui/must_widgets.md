@@ -60,6 +60,7 @@
 - `SelectibleText`
 - `Hero` - allows the user to focus
 - `LauncherIcon`
+- `Navigator`
 
 
 # Helpful moments
