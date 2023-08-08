@@ -28,6 +28,9 @@
 - `FlexibleAppBar`
 - `AnimatedFoo`
   - `AnimatedContainer` animated container that animates its children explicitly
+  - `AnimatedIcon`
+    ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/b5dfcb20-93ff-4d32-b883-4d51bb87810d)
+
 - `FooTransition`
 - `FutureBuilder` - we can know when it is loading and display `CircularProgressIdicator`
 - `CircularProgressIndicator`
@@ -41,7 +44,7 @@
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
 - `FittedBox` - to take a space of a parent
 - `Button`
-- `MediaQuery` establishes a subtree in which media query resolves to the given data (like to learn the size of the current media)
+- `MediaQuery` - establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) 
 - `ClipRRect` - to round a widget (but with `Container` it is preferable to use `decoration:` istead)
 - `PreferredSize` - advertises the preferred size which can be used by parent
@@ -53,6 +56,9 @@
 - `CircleAvatar`
 - `SplashScreen` - to show loading or smth
 - `SnackBar`
+- `GoogleFonts` - `google_fonts: ^version`
+- `SelectibleText`
+- `Hero` - allows the user to focus
 
 
 # Helpful moments
