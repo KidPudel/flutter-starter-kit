@@ -87,3 +87,6 @@
 - To check the platform just use `Platform.isAndroid` or [this](https://github.com/KidPudel/flutter-starter-kit/blob/main/platform_specific.md)
 - `Lint` plugin to show you all best practices
 - Use `Flexible` fit (tight to really take up space)
+- if you want to put another list into a listview, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrilling, use not scrollable physics
+- if you want to use some bested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
+it needs and it will become scrillable
