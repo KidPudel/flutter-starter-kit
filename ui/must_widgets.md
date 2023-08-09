@@ -42,6 +42,8 @@
   - `SliverPadding`
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
+- `Flexible` - to scale the child widget accordingly like weight(0.5f)
+- `FractionallySizedBox` - takes some % of all awailable space
 - `FittedBox` - to take a space of a parent
 - Buttons
   - `ElevatedButton`
@@ -50,7 +52,7 @@
   - `IconButton`
   - `ToggleButton`
 - `MediaQuery` - establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
-- `Flexible` - to scale the child widget accordingly like weight(0.5f) 
+
 - `ClipRRect` - to round a widget (but with `Container` it is preferable to use `decoration:` istead)
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `GestureDetector`
