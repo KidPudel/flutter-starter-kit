@@ -21,6 +21,9 @@
 - `slivers` -  A sliver is a portion of a scrollable area that you can define to behave in a special way. You can use slivers to achieve custom scrolling effects, such as elastic scrolling.
   - explaned https://www.youtube.com/watch?v=Mz3kHQxBjGg&ab_channel=GoogleforDevelopers
 - `CustomScrollView` -  when you need to create custom scroll effects or complex scrollable layouts using multiple slivers, and you want more control over the scroll behavior and UI appearance.
+- SliverList
+- GridView.builder
+- SingleChildScrollableView - connects wisget to one scrollable view (disables all nested scrolling)
 - `AppBar`
 - `SliverAppBar`
 - `SliverToBoxAdapter` - to place a non sliver widget in sliver
@@ -87,6 +90,7 @@
 - To check the platform just use `Platform.isAndroid` or [this](https://github.com/KidPudel/flutter-starter-kit/blob/main/platform_specific.md)
 - `Lint` plugin to show you all best practices
 - Use `Flexible` fit (tight to really take up space)
-- if you want to put another list into a listview, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrilling, use not scrollable physics
+- if you want to put another list into a listview, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrilling, set scrolling false or use not scrollable physics
+- another way to make whole widget single scrollable is to wrap it with SingleChildScrollableView (and dont forget to disable scrolling on nested views
 - if you want to use some bested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
 it needs and it will become scrillable
