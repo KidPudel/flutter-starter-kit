@@ -75,10 +75,11 @@
 - `LinearGradient`
 
 
-# Helpful moments
+# Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
 - USE `ScrollController` it is supper dope!!! `.animateTo` :3
 - Spread operator, you could have a another list of items in columns, and you can go with `children: [Button(), ...anotherButtons]`
 - To check the platform just use `Platform.isAndroid` or [this](https://github.com/KidPudel/flutter-starter-kit/blob/main/platform_specific.md)
 - `Lint` plugin to show you all best practices
+- Use `Flexible` fit (tight to really take up space)
