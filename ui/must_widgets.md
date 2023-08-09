@@ -66,6 +66,8 @@
 - `Image`
   - `AssetImage`
 - `CachedNetworkImage`
+- `Color`/`Colors`
+- `LinearGradient`
 
 
 # Helpful moments
