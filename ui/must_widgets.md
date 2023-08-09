@@ -34,8 +34,8 @@
 - `FooTransition`
 - `FutureBuilder` - we can know when it is loading and display `CircularProgressIdicator`
 - `CircularProgressIndicator`
-- `Container`
-- `Card`
+- `Container` - do you need a background color, or shape or some size constraints (position also)
+- `Card` - like a Container but with elevation
 - `BoxDecoration`
 - `GestureDetector`
 - `Padding`
