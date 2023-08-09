@@ -63,6 +63,9 @@
 - `LauncherIcon`
 - `Navigator`
 - `ButtonSheet` - SHEET !!! also you can use `showButtonSheet()` and `showModalButtonSheet()`
+- `Image`
+  - `AssetImage`
+- `CachedNetworkImage`
 
 
 # Helpful moments
