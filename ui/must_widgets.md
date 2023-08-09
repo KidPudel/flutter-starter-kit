@@ -91,6 +91,6 @@
 - `Lint` plugin to show you all best practices
 - Use `Flexible` fit (tight to really take up space)
 - if you want to put another list into a listview, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrilling, set scrolling false or use not scrollable physics
-- another way to make whole widget single scrollable is to wrap it with SingleChildScrollableView (and dont forget to disable scrolling on nested views
+- another way to make whole widget single scrollable is to wrap it with SingleChildScrollableView (and dont forget to disable scrolling on nested views, but also itead of singlechildscrollableview and column you can use list view, which make it scrollable
 - if you want to use some bested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
 it needs and it will become scrillable
