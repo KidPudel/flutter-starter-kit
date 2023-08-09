@@ -75,6 +75,7 @@
 - `CachedNetworkImage`
 - `Color`/`Colors`
 - `LinearGradient`
+- `BackdropFilter` - to apply some filters like to the container
 
 
 # Tips
