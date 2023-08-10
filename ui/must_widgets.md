@@ -99,7 +99,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `LinearGradient`
 - `BackdropFilter` - to apply some filters like to the container
 - `showDatePicker`
-
+- `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
 
 # Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
