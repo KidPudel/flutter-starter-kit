@@ -19,6 +19,8 @@
 - `Wrap` - you may have too many elements and it would just go to another line
 - `ListView` **scrollable**, when you have a large list of items that need to be scrollable
   - `.builder` and created on demand (lazy)
+  - `shrinkWrap: true` - to limit height
+  - `primary: false` - to disable scrolling, which could make it a part of one scrollable object like `SliverList` 
 - `ScrollView` is used to put different or same child views or layouts and the all can be scrolled. Use `ScrollView` when you need more control over the scrolling behavior or want to create custom scrolling effects.
 - `slivers` -  A sliver is a portion of a scrollable area that you can define to behave in a special way. You can use slivers to achieve custom scrolling effects, such as elastic scrolling.
   - explaned https://www.youtube.com/watch?v=Mz3kHQxBjGg&ab_channel=GoogleforDevelopers
