@@ -23,7 +23,11 @@
 - `CustomScrollView` -  when you need to create custom scroll effects or complex scrollable layouts using multiple slivers, and you want more control over the scroll behavior and UI appearance.
 - SliverList
 - GridView.builder
-- SingleChildScrollableView - connects wisget to one scrollable view (disables all nested scrolling)
+- `SingleChildScrollableView` - connects wisget to one scrollable view (disables all nested scrolling)
+  ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/02cf4209-29ed-4d89-8161-0e65b8cceeb8)
+  ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/b8e9a660-d08d-40e1-8480-a1626efbba33)
+
+
 - `AppBar`
 - `SliverAppBar`
 - `SliverToBoxAdapter` - to place a non sliver widget in sliver
@@ -45,7 +49,7 @@
   - `SliverPadding`
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
-- `Flexible` - to scale the child widget accordingly like weight(0.5f)
+- `Flexible` - to scale the child widget accordingly like weight(0.5f), or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
 - `FractionallySizedBox` - takes some % of all awailable space
 - `FittedBox` - to take a space of a parent
 - Buttons
@@ -90,7 +94,7 @@
 - To check the platform just use `Platform.isAndroid` or [this](https://github.com/KidPudel/flutter-starter-kit/blob/main/platform_specific.md)
 - `Lint` plugin to show you all best practices
 - Use `Flexible` fit (tight to really take up space)
-- if you want to put another list into a listview, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrilling, set scrolling false or use not scrollable physics
-- another way to make whole widget single scrollable is to wrap it with SingleChildScrollableView (and dont forget to disable scrolling on nested views, but also itead of singlechildscrollableview and column you can use list view, which make it scrollable
-- if you want to use some bested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
+- if you want to put another list into a `listview`, just use column, because columns are not scrollable and then use another nested list if you want and to disable scrolling, set scrolling false or use not scrollable physics
+- another way to make whole widget single scrollable is to wrap it with `SingleChildScrollableView` (and dont forget to disable scrolling on nested views), but also itead of `SingleChildScrollableView` and `column` you can use `list view`, which make it scrollable, but make children not scrollable
+- if you want to use some nested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
 it needs and it will become scrillable
