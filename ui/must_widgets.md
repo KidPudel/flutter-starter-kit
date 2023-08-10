@@ -62,6 +62,9 @@
 - `Card` - like a Container but with elevation
 - `BoxDecoration` - to set decration in container
 - `GestureDetector`
+  - onTap
+  - onPan (swipe)
+  - etc
 
 - Buttons
   - `ElevatedButton`
