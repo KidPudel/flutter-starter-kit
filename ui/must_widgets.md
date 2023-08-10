@@ -30,6 +30,7 @@
 - `SingleChildScrollableView` - connects wisget to one scrollable view (disables all nested scrolling)
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/02cf4209-29ed-4d89-8161-0e65b8cceeb8)
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/b8e9a660-d08d-40e1-8480-a1626efbba33)
+- `ScrollablePositionedList`
 - `Padding`
   - `SliverPadding`
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
