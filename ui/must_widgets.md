@@ -152,7 +152,7 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
   Widget build(BuildContext context) {
     return ListView(
       shrinkWrap: true, // limit height
-      primary: false,
+      primary: false, // disable scrolling
       children: [
         Padding(
           padding: const EdgeInsets.only(left: 10),
@@ -163,7 +163,7 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
               children: [
                 Text(
                   widget.categoryMenuListItem.category,
-                  style: TextStyle(fontSize: 30),
+                  style: const TextStyle(fontSize: 30),
                   textAlign: TextAlign.start,
                 ),
               ],
@@ -171,18 +171,16 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
           ),
         ),
         firstItem(widget.categoryMenuListItem.firstItem),
-        Flexible( // as needs
-          child: GridView.builder(
-            shrinkWrap: true, // limit height
-            primary: false, // disable scrolling
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2),
-            itemCount: widget.categoryMenuListItem.restOfItems.length,
-            physics: const NeverScrollableScrollPhysics(),
-            itemBuilder: (context, i) {
-              return dishCard(widget.categoryMenuListItem.restOfItems[i]);
-            },
-          ),
+        GridView.builder(
+          shrinkWrap: true, // limit height
+          primary: false, // disable scrolling
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: 2),
+          itemCount: widget.categoryMenuListItem.restOfItems.length,
+          physics: const NeverScrollableScrollPhysics(),
+          itemBuilder: (context, i) {
+            return dishCard(widget.categoryMenuListItem.restOfItems[i]);
+          },
         )
       ],
     );
