@@ -106,6 +106,10 @@
 - if you want to use some nested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
 it needs and it will become scrillable
 
+---
+
 So meaning, `flexible` digit will make nest at least you inside of `column` take all available space as he needs as opposite to `expanded`, which will always take available space on the screen, even if it doesn’t need to
 
 `Column` is not scrollable so it could “overflow”, but it’s actually error of unbounded. so for example inside of `column` for nested widget you could `Expanded` it with or `flexible` to take all available space it needs space it’s good or less and alternatively, wrap it with `Expanded` it to take all available space on the screen or `sizebox` too take specified size which could overflow but you actually manage it
+
+---
