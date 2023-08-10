@@ -10,12 +10,14 @@
 
   4. **Custom Scroll Behaviors:** If you need advanced custom scroll effects or complex scrollable layouts that go beyond the standard app bar and scrolling behavior provided by `Scaffold`, you may prefer to use `CustomScrollView` with slivers directly.
   Flutter offers great flexibility, allowing you to build UIs using a wide variety of widgets and patterns, giving you the freedom to choose the most suitable approach for your app's needs.
+
+# Alignment (vertical, horizontal etc)
 - `SafeArea` it pads a child to match a space area
 - `Column` - when you want a simple vertical layout without scrolling.
 - `Row`
-- `Stack`
+- `Stack` - place on top
 - `Wrap` - you may have too many elements and it would just go to another line
-- `ListView` scrollable, when you have a large list of items that need to be scrollable
+- `ListView` **scrollable**, when you have a large list of items that need to be scrollable
   - `.builder` and created on demand (lazy)
 - `ScrollView` is used to put different or same child views or layouts and the all can be scrolled. Use `ScrollView` when you need more control over the scrolling behavior or want to create custom scrolling effects.
 - `slivers` -  A sliver is a portion of a scrollable area that you can define to behave in a special way. You can use slivers to achieve custom scrolling effects, such as elastic scrolling.
@@ -26,8 +28,19 @@
 - `SingleChildScrollableView` - connects wisget to one scrollable view (disables all nested scrolling)
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/02cf4209-29ed-4d89-8161-0e65b8cceeb8)
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/b8e9a660-d08d-40e1-8480-a1626efbba33)
+- `Padding`
+  - `SliverPadding`
+- `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
+- `Expanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
+- `Flexible` - to scale the child widget accordingly like weight(0.5f), or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
+- `FractionallySizedBox` - takes some % of all awailable space
+- `FittedBox` - to take a space of a parent
+- `PreferredSize` - advertises the preferred size which can be used by parent
+- `LayoutBulder` - can give you currect available space size
+- `MediaQuery` - establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 
 
+# Other
 - `AppBar`
 - `SliverAppBar`
 - `SliverToBoxAdapter` - to place a non sliver widget in sliver
@@ -43,26 +56,18 @@
 - `CircularProgressIndicator`
 - `Container` - do you need a background color, or shape or some size constraints (position also) aslo padding and margin
 - `Card` - like a Container but with elevation
-- `BoxDecoration`
+- `BoxDecoration` - to set decration in container
 - `GestureDetector`
-- `Padding`
-  - `SliverPadding`
-- `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
-- `Explanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
-- `Flexible` - to scale the child widget accordingly like weight(0.5f), or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
-- `FractionallySizedBox` - takes some % of all awailable space
-- `FittedBox` - to take a space of a parent
+
 - Buttons
   - `ElevatedButton`
   - `OutlinedButton`
   - `TextButton`
   - `IconButton`
   - `ToggleButton`
-- `MediaQuery` - establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 
 - `ClipRRect` - to round a widget (but with `Container` it is preferable to use `decoration:` istead)
-- `PreferredSize` - advertises the preferred size which can be used by parent
-- `GestureDetector`
+
 - `Visibility`
 - `Divider`
 - `RichText`
@@ -84,7 +89,7 @@
 - `LinearGradient`
 - `BackdropFilter` - to apply some filters like to the container
 - `showDatePicker`
-- `LayoutBulder` - can give you currect available space size
+
 
 # Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
@@ -98,3 +103,6 @@
 - another way to make whole widget single scrollable is to wrap it with `SingleChildScrollableView` (and dont forget to disable scrolling on nested views), but also itead of `SingleChildScrollableView` and `column` you can use `list view`, which make it scrollable, but make children not scrollable
 - if you want to use some nested listview in column, you want yo use shrinkWrap = true, to make it not infinite height, and use Flexible to take it as much space as
 it needs and it will become scrillable
+So meaning, flexible digit will make nest at least you inside of column take all available space as he needs as opposite to expand it, which will always take available space on the screen, even if it doesn’t need to
+
+Column is not scrollable so it could “overflow”, but it’s actually error of unbounded. so for example inside of column for nested widget you could Expanded it with or flexible to take all available space it needs space it’s good or less and alternatively, wrap it with Expanded it to take all available space on the screen or size box too take specified size which could overflow but you actually manage it
