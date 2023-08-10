@@ -113,3 +113,73 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
 `Column` is not scrollable so it could “overflow”, but it’s actually error of unbounded. so for example inside of `column` for nested widget you could `Expanded` it with or `flexible` to take all available space it needs space it’s good or less and alternatively, wrap it with `Expanded` it to take all available space on the screen or `sizebox` too take specified size which could overflow but you actually manage it
 
 ---
+
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return PlatformScaffold(
+        backgroundColor: Colors.white,
+        body: SafeArea(
+          child: CustomScrollView(
+            controller: _controller,
+            slivers: [
+              superSliverAppBar(),
+              sliverCategoriesAppBar(),
+              SliverList(
+                delegate: SliverChildBuilderDelegate(
+                  (context, i) {
+                    return CategoryMenuListItemScreen(
+                        categoryMenuListItem: constants.menu[i]);
+                  },
+                  childCount: constants.menu.length,
+                ),
+              )
+            ],
+          ),
+        ));
+  }
+```
+
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return ListView(
+      shrinkWrap: true, // limit height
+      primary: false,
+      children: [
+        Padding(
+          padding: const EdgeInsets.only(left: 10),
+          child: SizedBox(
+            height: 30,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Text(
+                  widget.categoryMenuListItem.category,
+                  style: TextStyle(fontSize: 30),
+                  textAlign: TextAlign.start,
+                ),
+              ],
+            ),
+          ),
+        ),
+        firstItem(widget.categoryMenuListItem.firstItem),
+        Flexible( // as needs
+          child: GridView.builder(
+            shrinkWrap: true, // limit height
+            primary: false, // disable scrolling
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2),
+            itemCount: widget.categoryMenuListItem.restOfItems.length,
+            physics: const NeverScrollableScrollPhysics(),
+            itemBuilder: (context, i) {
+              return dishCard(widget.categoryMenuListItem.restOfItems[i]);
+            },
+          ),
+        )
+      ],
+    );
+  }
+```
