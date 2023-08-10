@@ -34,7 +34,9 @@
 - `Expanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
 - `Flexible` - to scale the child widget accordingly like weight(0.5f), or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
 - `FractionallySizedBox` - takes some % of all awailable space
-- `FittedBox` - to take a space of a parent
+- `FittedBox` - to fit a space of a parent
+  - `BoxFit.contain`, fitWidth, fill, none
+  - alignment
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `LayoutBulder` - can give you currect available space size
 - `MediaQuery` - establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
