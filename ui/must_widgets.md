@@ -100,7 +100,9 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `BackdropFilter` - to apply some filters like to the container
 - `showDatePicker`
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
+- `FlutterMap`
 
+So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable
 # Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
