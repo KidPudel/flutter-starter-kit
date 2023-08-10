@@ -1,3 +1,5 @@
+https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
+
 # Must-have widgets
 - `Scaffold` fundamental building block that makes everything more convenient, like provides background color, sets some defaults, provides some implementions etc, but you can go without it, like use `CustomScrollView`  
   When might you choose not to use `Scaffold`?
