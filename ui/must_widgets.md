@@ -50,6 +50,12 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `BoxConstrains` - **responsive ui**
 - `Positioned`
 
+## You can space with
+- `SizedBox`
+- `Flexible` - in columns and rows
+- `Padding` - in columns and rows
+- `FractionallySizedBox` - in columns and rows (dont forget to use flexible)
+
 # Other
 - `AppBar`
 - `SliverAppBar`
