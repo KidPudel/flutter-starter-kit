@@ -47,6 +47,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `LayoutBulder` - can give you currect available space size, as well you can handle logic if too small for example, because of flexible, and you cant see an image, just return image without flexible otherwize
 - `MediaQuery` - **responsive ui**, establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
+- `BoxConstrains` - **responsive ui**
 - `Positioned`
 
 # Other
