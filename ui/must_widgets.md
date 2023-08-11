@@ -38,7 +38,8 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Expanded` - to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
 - `Flexible` - to scale the child widget accordingly like weight(0.5f) _**IN `COLUMN` OR `ROW`**_, or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
-  - also can be `loose` or `tight`
+  - fit `loose` - container take preferable size
+  - fit `tight` - to force it take a space
 - `FractionallySizedBox` - takes some % of all awailable space, also can be used like a spacer but fractional kind of like `Spacer(modifier = Modifier.weight(0.1f)`, and to play well with Rows and Columns, wrap with `Flexible` 
 - `FittedBox` - to fit a space of a parent
   - `BoxFit.contain`, fitWidth, fill, none
