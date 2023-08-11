@@ -40,7 +40,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `Flexible` - **responsive ui** to scale the child widget accordingly like weight(0.5f) _**IN `COLUMN` OR `ROW`**_, or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
   - fit `loose` - container take preferable size
   - fit `tight` - to force it take a space
-- `FractionallySizedBox` - takes some % of all awailable space, also can be used like a spacer but fractional kind of like `Spacer(modifier = Modifier.weight(0.1f)`, and to play well with Rows and Columns, wrap with `Flexible` 
+- `FractionallySizedBox` - takes some % of all awailable space (if it alone, then it always take max), also can be used like a spacer but fractional kind of like `Spacer(modifier = Modifier.weight(0.1f)`, and to play well with Rows and Columns, wrap with `Flexible` 
 - `FittedBox` - to fit a space of a parent
   - `BoxFit.contain`, fitWidth, fill, none
   - alignment
