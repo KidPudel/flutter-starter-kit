@@ -94,8 +94,9 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `LauncherIcon`
 - `Navigator`
 - `ButtonSheet` - SHEET !!! also you can use `showButtonSheet()` and `showModalButtonSheet()`
-- `Image`
-  - `AssetImage`
+- `Image`, `AssetImage`
+  - `fit` - to scale, like fit height, or fill
+  - `height`, `width`
 - `CachedNetworkImage`
 - `Color`/`Colors`
 - `LinearGradient`
