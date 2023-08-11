@@ -323,3 +323,159 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
   }
 
 ```
+
+# How wrapping a Column > Expanded with another Expanded solves the error.
+
+RenderFlex Unbounded Error
+A common nested Column-Expanded hierarchy that gets the "RenderFlex children have non-zero flex but incoming height constraints are unbounded" error:
+```
+Screen
+  → Column
+    → Column
+      → Expanded → ERROR
+```
+What's happening:
+```
+Screen
+  ↓ constraint ↓ (Screen)
+  Column
+    Text_A (fixed height: no constraint needed) → OK
+    Column 
+      ↓ constraint ↓ (unbounded)
+      Text_B (fixed height) → OK
+      Expanded: calc. height = unbounded - Text_B → ERROR
+```
+During layout, a Column performs (in order):
+
+fixed-height (i.e. null/zero flex-factor) widget layouts in unbounded space, then...
+flex-factor sized widgets, calculating remaining space from the parent (i.e. incoming constraints) & the fixed size widgets
+Text_A above is fixed-height. It doesn't use incoming constraints for layout.
+
+Expanded though, is a flex-factor widget, sizing itself on remaining space, after fixed-size items are laid out. This requires an incoming constraint (parent size) to do subtraction:
+
+  parent size (constraint) - fixed-items size = remaining space
+The 1st Column gets constraints from the device screen (provided via Scaffold, etc.).
+
+But, the 2nd Column (the nested one) is laid out in unbounded space.
+
+Remaining space cannot be calculated:
+  unbounded - Text_B = unbounded (error)
+Why is a Nested Column Unbounded?
+```
+
+Screen
+  → Column
+    → Column
+      → Expanded
+```
+Copied from Column SDK source documentation, Step 1:
+
+/// 1. Layout each child with a null or zero flex factor (e.g., those that are not
+///    [Expanded]) with unbounded vertical constraints
+The 2nd, nested Column:
+
+is a child of Column (the 1st one, obviously), and...
+has zero or null flex factor
+The second point is easy to miss/not see, but Column is not a flex-factor widget.
+
+Checking SDK source...
+
+Column extends Flex class.
+
+Flex, does not have a flex field / flex factor. Only Flexible class and its children are flex factor widgets.
+
+So the 2nd Column is laid out in unbounded constraints because it is not a flex-factor widget. Those unbounded constraints are used to layout Text_B widget (a fixed-size or null flex factor widget), then Expanded tries to calculate remaining space. When trying to calculate remaining space with an unbounded constraint....
+
+  unbounded - Text_B = unbounded (error)
+🔥 Expanded explodes 🔥
+
+Flexible
+To be hyper-repetitive: Flexible, is the flex-factor widget with a flex field/factor.
+
+Expanded and Spacer are the only child classes of Flexible (that I know of).
+
+So Expanded, Spacer, and Flexible are the only flex-factor widgets and
+
+Flexible != Flex
+
+The Fix - Adding Bounds
+Fixing the widget tree:
+```
+Screen
+  → Column
+    → Expanded ← new
+      → Column
+        → Expanded → OK
+```
+Why this works...
+```
+Screen
+  ↓ constraint ↓
+  Column
+    Text_A ↑ fixed-size ↑
+    ↓ constraint ↓ (calculated: Screen height - Text_A height)
+    Expanded_A
+      ↓ constraint ↓ (Screen - Text_A)
+      Column
+        Text_B ↑ fixed-size ↑
+        Expanded_B: calc. height = (Screen - Text_A) - Text_B = remaining space → OK
+```
+In this case... After fixed-items are laid out (Text_A), remaining space is calculated for Expanded_A:
+
+parent size (screen) - fixed-items (Text_A) = remaining space
+Now Expanded_A has a defined amount of space.
+
+Expanded_A provides its size for use by the child Column calculating remaining space for Expanded_B after laying out Text_B.
+
+parent size - fixed-items = remaining space
+                  ↓
+(Screen - Text_A) - (Text_B) = remaining space for Expanded_B
+Now all flex-factor relative sized widgets (i.e. Expanded_A, Expanded_B) have bounded constraints with which to calculate their layout size.
+
+Note that you can use Flexible interchangably here with Expanded. It calculates remaining space the same way as Expanded. It just doesn't force children to fit its size, so they can be smaller if they wish.
+
+```
+NOT OK
+/// Unbounded constraint: NOT OK
+class RenderFlexUnboundedPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Column(
+            children: [
+              Text('Column > Column > Text_A'),
+              Expanded(
+                  child: Text('Column > Column > Expanded_A')) // explosions
+            ],
+          )
+        ],
+      ),
+    );
+  }
+}
+OK
+/// Constraints provided: OK
+class RenderFlexPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          Text('Column > Text_A'),
+          Expanded( // Expanded_A
+            child: Column(
+              children: [
+                Text('Column > Expanded_A > Column > Text_B'),
+                Expanded( // Expanded_B
+                    child: Text('Column > Expanded_A > Column > Expanded_B'))
+              ],
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}
+```
