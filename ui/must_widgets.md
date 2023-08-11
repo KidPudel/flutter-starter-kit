@@ -197,3 +197,121 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
     );
   }
 ```
+
+
+# Great example of using Column and Flexible space with FractionallySizedBox
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return PlatformScaffold(
+      body: SafeArea(
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Flexible(
+                  flex: 2,
+                  fit: FlexFit.tight,
+                  child: Image.asset("images/brand_images/big_logo.png", fit: BoxFit.fill,),
+                ),
+                Flexible(
+                  flex: 5,
+                  fit: FlexFit.tight,
+                  child: AnimatedSwitcher(
+                    duration: const Duration(seconds: 1),
+                    transitionBuilder: (child, animation) => FadeTransition(
+                      opacity: animation,
+                      child: child,
+                    ),
+                    child: Image.asset(
+                      listOfDishes[currentImage],
+                      width: MediaQuery.of(context).size.width,
+                      fit: BoxFit.fitHeight,
+                      key: ValueKey(currentImage),
+                    ),
+                  ),
+                ),
+                Flexible(
+                    child: FractionallySizedBox(
+                  heightFactor: 0.1,
+                )),
+                Flexible(
+                  child: FractionallySizedBox(
+                    widthFactor: 0.8,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/map_screen');
+                      },
+                      style: ElevatedButton.styleFrom(
+                          elevation: 0,
+                          backgroundColor: CustomColors().buttonColor,
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(10))),
+                      child: const Text("Choose an address",
+                          style: TextStyle(fontSize: 20, color: Colors.white)),
+                    ),
+                  ),
+                ),
+                Flexible(
+                  child: TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        "Sign in",
+                        style: TextStyle(color: Colors.black),
+                      )),
+                )
+              ],
+            ),
+            Align(
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Flexible(flex: 1, child: Container()),
+                    Flexible(
+                      flex: 2,
+                      child: Container(
+                        decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: CustomColors().buttonColor),
+                        height: 110,
+                        width: 110,
+                        child: Padding(
+                          padding: const EdgeInsets.all(11.0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const [
+                              Text(
+                                "delivery",
+                                style: TextStyle(fontSize: 14),
+                              ),
+                              Text(
+                                "30",
+                                style: TextStyle(
+                                    fontSize: 50,
+                                    fontWeight: FontWeight.w900,
+                                    height: 0.9),
+                              ),
+                              Text("minutes",
+                                  style: TextStyle(fontSize: 14, height: 0.5)),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                    Expanded(child: Container())
+                  ],
+                ),
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+```
