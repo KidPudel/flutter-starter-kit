@@ -164,4 +164,31 @@ void main() {
 ```
 _singleton is the single instance that is being create with the _internal named constructor and that the factory method returns this single instance_.
 
+# Sealed
+To create a known, enumerable set of subtypes, use the sealed modifier. This allows you to create a switch over those subtypes that is statically ensured to be exhaustive.
+
+```dart
+sealed class Vehicle {}
+
+class Car extends Vehicle {}
+
+class Truck implements Vehicle {}
+
+class Bicycle extends Vehicle {}
+
+// ERROR: Cannot be instantiated
+Vehicle myVehicle = Vehicle();
+
+// Subclasses can be instantiated
+Vehicle myCar = Car();
+
+String getVehicleSound(Vehicle vehicle) {
+  // ERROR: The switch is missing the Bicycle subtype or a default case.
+  return switch (vehicle) {
+    Car() => 'vroom',
+    Truck() => 'VROOOOMM',
+  };
+}
+```
+
 more info here -> [INFO](https://dart.dev/samples)
