@@ -129,7 +129,7 @@ So meaning, `flexible` digit will make nest at least you inside of `column` take
 
 ---
 
-# Example of using layouts
+# Example of using layouts like columns (columns use flexible) and builders as well as nesting and combining all to one scrollable
 
 ```dart
 @override
