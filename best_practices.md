@@ -45,3 +45,12 @@ linter:
     # prefer_double_quotes: true
     # prefer_single_quotes: true
 ```
+
+
+# Packages / modules
+separate code and make it more reusable
+1. Create folder packages
+2. add package (like authentication, that will have logic for sign in, sign up)
+3. create `pubspec.yaml`, here you can much cleaner specification, even without flutter (ui)
+4. create `lib`
+5. create new things...✨✨✨
