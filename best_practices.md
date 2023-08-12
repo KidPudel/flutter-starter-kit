@@ -6,7 +6,7 @@
 
 ---
 
-# Lint
+# Lint or just use flutter_lint
 lint is a hand-picked, open-source, community-driven collection of lint rules for Dart and Flutter projects. The set of rules follows the Effective Dart: Style Guide.
 
 This package can be used as a replacement for package:lints or the discontinued package:pedantic for those who prefer stricter rules.
