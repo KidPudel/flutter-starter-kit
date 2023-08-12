@@ -42,19 +42,35 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
   - fit `tight` - to force it take a space
 - `FractionallySizedBox` - takes some % of all awailable space (if it alone, then it always take max), also can be used like a spacer but fractional kind of like `Spacer(modifier = Modifier.weight(0.1f)`, and to play well with Rows and Columns, wrap with `Flexible` 
 - `FittedBox` - to fit a space of a parent
-  - `BoxFit.contain`, fitWidth, fill, none
-  - alignment
+  - `BoxFit.contain`, `fitWidth`, `fill`, `none`
+  - `alignment`
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `LayoutBulder` - can give you currect available space size, as well you can handle logic if too small for example, because of flexible, and you cant see an image, just return image without flexible otherwize
 - `MediaQuery` - **responsive ui**, establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 - `BoxConstrains` - **responsive ui**
 - `Positioned`
 
-## You can space with
+## You can space elements with
 - `SizedBox`
 - `Flexible` - in columns and rows
 - `Padding` - in columns and rows
+
+## You can size elements with
+- `LayoutBulder` - can give you currect available space size so you can size your object accordingly, as well you can handle logic if too small for example, because of flexible, and you cant see an image, just return image without flexible otherwize
+- `PreferredSize` - advertises the preferred size which can be used by parent
+- `MediaQuery` - **responsive ui**, establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 - `FractionallySizedBox` - in columns and rows (dont forget to use flexible)
+- `FittedBox` - to fit a space of a parent
+  - `BoxFit.contain`, `fitWidth`, `fill`, `none`
+  - `alignment`
+- `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
+- `FractionallySizedBox` - in columns and rows (dont forget to use flexible)
+- `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
+- `Expanded` - **responsive ui** to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
+- `Flexible` - **responsive ui** to scale the child widget accordingly like weight(0.5f) _**IN `COLUMN` OR `ROW`**_, or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
+  - fit `loose` - container take preferable size
+  - fit `tight` - to force it take a space
+- `FractionallySizedBox`
 
 # Other
 - `AppBar`
