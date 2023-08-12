@@ -60,7 +60,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `PreferredSize` - advertises the preferred size which can be used by parent
 - `MediaQuery` - **responsive ui**, establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 - `FractionallySizedBox` - in columns and rows (dont forget to use flexible)
-- `FittedBox` - to fit a space of a parent
+- `FittedBox` - to fit a space of a parent by some rules
   - `BoxFit.contain`, `fitWidth`, `fill`, `none`
   - `alignment`
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
@@ -120,7 +120,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `Navigator`
 - `ButtonSheet` - SHEET !!! also you can use `showButtonSheet()` and `showModalButtonSheet()`
 - `Image`, `AssetImage`
-  - `fit` - to scale, like fit height, or fill
+  - `fit` - to scale, like fit height, or fill (it can be used instead of FittedBox and LayoutBilder)
   - `height`, `width`
 - `CachedNetworkImage`
 - `Color`/`Colors`
