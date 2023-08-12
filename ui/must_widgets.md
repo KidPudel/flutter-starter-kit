@@ -89,6 +89,8 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 
 - `Visibility`
 - `Divider`
+- `Text`
+  - `overflow`
 - `RichText`
 - `IntroductionScreen`
 - `CircleAvatar`
