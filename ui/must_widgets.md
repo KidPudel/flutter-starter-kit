@@ -113,7 +113,8 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `FlutterMap`
 - `ChangeNotifier` - provides change notification to its lisnteners
 
-So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable
+So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
+to make list scrollable inside fixed size column, just make it shrink-warp abd flexible or expanded, so it could take rest of space available and still scrollable by itself but just not full screen, but size youve given, and if you want to make nested list a part of other list, just make it not scrollable primary false, or if it inside column then make SingleSctollqbleView
 # Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
 - `BoxClip.cover` - as small as possible while still covering entiring target box
