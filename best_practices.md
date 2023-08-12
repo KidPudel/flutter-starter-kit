@@ -54,3 +54,12 @@ separate code and make it more reusable
 3. create `pubspec.yaml`, here you can much cleaner specification, even without flutter (ui)
 4. create `lib`
 5. create new things...✨✨✨
+6. now import that package in dependecies
+   ```yaml
+   dependencies:
+     flutter:
+       ...
+     authentication:
+       path: './packages/authentication'
+   ```
+7. import it
