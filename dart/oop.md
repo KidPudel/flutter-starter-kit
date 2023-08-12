@@ -191,4 +191,19 @@ String getVehicleSound(Vehicle vehicle) {
 }
 ```
 
+
+# Extensions
+```dart
+extension CategoryName on Category {
+  String get name {
+    switch(this) {
+      case Category.pizzas:
+        return "Pizzas";
+      case Category.pastas:
+        return "Rolls";
+    }
+  }
+}
+```
 more info here -> [INFO](https://dart.dev/samples)
+
