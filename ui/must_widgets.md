@@ -1,4 +1,4 @@
-https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/dfe20117-7861-4bdb-b741-e787010c2123)https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 
 # Must-have widgets
 - `Scaffold` fundamental building block that makes everything more convenient, like provides background color, sets some defaults, provides some implementions etc, but you can go without it, like use `CustomScrollView`  
@@ -128,7 +128,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `BackdropFilter` - to apply some filters like to the container
 - `showDatePicker`
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
-- `FlutterMap`
+- [`FlutterMap`](https://docs.fleaflet.dev/)
 - `ChangeNotifier` - provides change notification to its lisnteners
 
 So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
