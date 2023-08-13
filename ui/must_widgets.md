@@ -136,6 +136,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - [`scrollable_positioned_list`](https://pub.dev/packages/scrollable_positioned_list)
 - [`flutter_bloc`](https://pub.dev/packages/flutter_bloc)
 - [`scrollable_positioned_list`](https://pub.dev/packages/flutter_platform_widgets)
+- [`go_route`](https://pub.dev/packages/go_router)
 
 ---
 
