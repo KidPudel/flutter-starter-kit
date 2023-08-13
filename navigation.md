@@ -133,7 +133,11 @@ GoRouter _route = GoRouter(
         GoRoute(
             path: '/map_screen',
             builder: (context, state) => const MapScreen()
-        )
+        ),
+        GoRoute(
+            path: '/menu_screen/:address',
+            builder: (context, state) => MenuScreen(state.pathParameters['address'] ?? 'routing_error')
+        ),
     ]
 )
 ```
