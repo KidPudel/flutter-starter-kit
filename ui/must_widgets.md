@@ -1,4 +1,4 @@
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/dfe20117-7861-4bdb-b741-e787010c2123)https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
+https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 
 # Must-have widgets
 - `Scaffold` fundamental building block that makes everything more convenient, like provides background color, sets some defaults, provides some implementions etc, but you can go without it, like use `CustomScrollView`  
@@ -128,9 +128,15 @@
 - `BackdropFilter` - to apply some filters like to the container
 - `showDatePicker`
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
-- [`FlutterMap`](https://docs.fleaflet.dev/)
-- [`Geocoder`](https://pub.dev/packages/geocoder)
 - `ChangeNotifier` - provides change notification to its lisnteners
+
+# Packages
+- Geocoding - [`Geocoding`](https://pub.dev/packages/geocoding) [`Geocoder`](https://pub.dev/packages/geocoder)
+- [`FlutterMap`](https://docs.fleaflet.dev/)
+- [`scrollable_positioned_list`](https://pub.dev/packages/scrollable_positioned_list)
+- [`flutter_bloc`](https://pub.dev/packages/flutter_bloc)
+- [`scrollable_positioned_list`](https://pub.dev/packages/flutter_platform_widgets)
+
 
 So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
 to make list scrollable inside fixed size column, just make it shrink-warp abd flexible or expanded, so it could take rest of space available and still scrollable by itself but just not full screen, but size youve given, and if you want to make nested list a part of other list, just make it not scrollable primary false, or if it inside column then make SingleSctollqbleView
