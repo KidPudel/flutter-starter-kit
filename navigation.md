@@ -125,7 +125,7 @@ maybe you need to make some part of your app clickable, well here is [GestureDet
                             .............................
 ```
 
-# go_route
+# [go_route](https://pub.dev/documentation/go_router/latest/index.html)
 url based deep link handling package for navigating
 ```dart
 GoRouter _route = GoRouter(
