@@ -124,3 +124,37 @@ maybe you need to make some part of your app clickable, well here is [GestureDet
                             decoration: boxDecoration(
                             .............................
 ```
+
+# go_route
+url based deep link handling package for navigating
+```dart
+GoRouter _route = GoRouter(
+    routes: [
+        GoRoute(
+            path: '/map_screen',
+            builder: (context, state) => const MapScreen()
+        )
+    ]
+)
+```
+to navigate
+```dart
+GoRouter.of(context).go(Screens.MapScreen().route)
+```
+or use handy extension methods
+```dart
+context.go(Screens.MapScreen().route)
+```
+
+## To navigate just a subsection of the screen and static part just leave (like bottom bar navigation)
+Wrap routes in `ShellRoute`
+```dart
+routes [
+    ShellRoute(
+        routes[
+            ...
+        ]
+        builder: (context, state, child) => MyBottomBarNavigation(child)
+    )
+]
+```
