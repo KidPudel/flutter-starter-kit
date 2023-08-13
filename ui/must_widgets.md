@@ -129,6 +129,7 @@
 - `showDatePicker`
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
 - [`FlutterMap`](https://docs.fleaflet.dev/)
+- [`Geocoder`](https://pub.dev/packages/geocoder)
 - `ChangeNotifier` - provides change notification to its lisnteners
 
 So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
