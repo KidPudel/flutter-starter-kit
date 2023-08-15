@@ -3,6 +3,8 @@
 2. Recommended (suits) everywhere, small, medium and big projects
 3. Code is easy testable
 
+when you want to manage complex state or staye accross the apps
+
 # Core concepts
 ## 1. Stream - asynchronous _stream_ of data
 Stream functions marked with `async*` do not return a single value like `Future` `async`;
