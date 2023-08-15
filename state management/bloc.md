@@ -248,3 +248,49 @@ child: BlocConsumer<BoatsCubit, BoatsState>(
                 },
               ),
 ```
+
+# Usage
+we need to change a theme in the app on press, so meaning, give function and receive a stream
+```dart
+class ThemeCubit extends Cubit<bool> {
+  ThemeCubit() : super(false)
+  void switchTheme() => emit(!state);
+}
+```
+then we need to access it in a widget tree, so use `BlocProvider` or `MultipleBlocProvider`
+```dart
+MutlipleBlocProvider(
+  providers: [
+    BlocProvider(
+      create: (context) => ThemeCubit()
+    )
+    child:
+      ...
+  ]
+)
+```
+
+now to call cubit:
+```dart
+context.read<ThemeCubit>().switchTheme();
+```
+
+and to acutally access it use `BlocBuilder`
+```dart
+child:
+  BlocBuilder<ThemeBloc, bool>(
+    builder: (context) => Text((state == true) ? "changedToTrue" : "ChangedToFalse")
+  )
+```
+
+And the same applies for `Bloc`
+```dart
+sealed class UserEvent {}
+final class UserLogIn extends UserEvent {}
+final class UserLogOut extends UserEvent {}
+
+```
+```dart
+enum UserStatus { isLogging, isLoggedIn, isLoggingOut, isLoggedOut }
+
+```
