@@ -162,3 +162,11 @@ routes [
     )
 ]
 ```
+## push and pop
+To push and pop we need a like `pushNamed`, so for that in our routes we need to define name
+```dart
+GoRoute(
+        name: Screens.specialOfferScreen().route,
+        path: Screens.specialOfferScreen().route,
+        builder: (context, state) => const SpecialOfferScreen()),
+```
