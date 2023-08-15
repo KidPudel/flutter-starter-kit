@@ -291,6 +291,44 @@ final class UserLogOut extends UserEvent {}
 
 ```
 ```dart
-enum UserStatus { isLogging, isLoggedIn, isLoggingOut, isLoggedOut }
+enum UserStatus { logging, loggedIn, loggingOut, loggedOut }
 
+extension UserStatusCheck on UserStatus {
+  bool get isLoggin { this == UserStatus.logging };
+  ..
+}
+
+// basically a data class that we want to fill with information
+class UserState {
+  final String name;
+  final String id;
+  final UserStatus status;
+
+  UserState({
+    required this.name,
+    required this.id,
+    this.status = UserStatus.loggedOut
+  })
+}
+```
+```dart
+class UserBloc extends Bloc<UserEvent, UserState> {
+  UserBloc() : super(UserState(name = "unknow", id = -1));
+  // below some (event, emit) => function _onUserLogIn that handles logic and then `emit` value state
+  on<UserLogIn>(_onUserLogIn);
+  // save and clean up something
+  on<UserLogOut>(_onLogOut);
+}
+```
+
+to call it we need to add to stream with
+```dart
+context.read<UserBloc>().add(UserLogIn);
+```
+
+now to get the value
+```dart
+BlocBuilder<UserBloc, UserState>(
+  builder: (context) => Text(state.status.isLoggedIn ? state.name : "logging..." <- or handle logging with CircularProgressIndicator with future builder)
+)
 ```
