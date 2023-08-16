@@ -67,10 +67,31 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `FractionallySizedBox` - in columns and rows (dont forget to use flexible)
 - `SizedBox` - to set exact size (like height and width) aslo you can use `Continer` for that
 - `Expanded` - **responsive ui** to make a child widget take up the remaining available space along the main axis. **if you want to make something fill max size, use expanded** also you can use flex in case of a competition
-- `Flexible` - **responsive ui** to scale the child widget accordingly like weight(0.5f) _**IN `COLUMN` OR `ROW`**_, or rather scales as it needs, if nested `ListView` is `Flexible` in column, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to)
+- `Flexible` - **responsive ui** to scale the child widget accordingly like weight(0.5f) _**IN `COLUMN` OR `ROW`**_, or rather scales as it needs, if nested `ListView` is `Flexible` in `Column`, meaning in could overflow (unbounded error of column) `Flexible` will make `ListView` scale and take all available skill (**_if needs_** , as opposite to `Expanded`, which takes all space available everytime, even if it doesn't need to), you can set `flex: 0`, so it would not grow
   - fit `loose` - container take preferable size
   - fit `tight` - to force it take a space
 - `FractionallySizedBox`
+
+## Flexible vs Expanded
+`Expanded` is just a shorthand for `Flexible`
+
+Using `Expanded` this way:
+
+```dart
+Expanded(
+  child: Foo(),
+);
+is strictly equivalent to:
+```
+```dart
+Flexible(
+  fit: FlexFit.tight,
+  child: Foo(),
+);
+```
+You may want to use `Flexible` over `Expanded` when you want a different fit, useful in some responsive layouts.
+
+The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will allow its child to have a maximum size while tight forces that child to fill all the available space.
 
 # Other
 - `AppBar`
