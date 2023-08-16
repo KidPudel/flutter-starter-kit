@@ -104,3 +104,7 @@ void main() async {
   }
 }
 ```
+
+# Event handler
+`on<E>` register event handler for an event of type `E`  
+`on<E>((event, emit) => emit(state + 1 or some comlex logic)) `
