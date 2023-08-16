@@ -1,4 +1,4 @@
-# Future
+# Future or FutureOr<T> (returns Future or type T)
 The result of an asynchronous computation.
 An asynchronous computation cannot provide a result immediately when it is started, unlike a synchronous computation which does compute a result immediately by either returning a value or by throwing. An _asynchronous computation may need to wait for something external to the program_ (reading a file, querying a database, fetching a web page) which takes time. _Instead of blocking all computation until the result is available, the asynchronous computation immediately returns a `Future` which will eventually "complete" with the result_.
 
