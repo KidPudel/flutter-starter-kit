@@ -14,7 +14,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
   Flutter offers great flexibility, allowing you to build UIs using a wide variety of widgets and patterns, giving you the freedom to choose the most suitable approach for your app's needs.
 
 # Alignment (vertical, horizontal etc)
-- `SafeArea` it pads a child to match a space area
+- `SafeArea` it pads a child to match a space area (you can set any side to false, like bottom, to disable safearea on this side)
 - `Column` - when you want a simple vertical layout without scrolling.
 - `Row`
 - `Stack` - place on top
