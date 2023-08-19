@@ -17,6 +17,10 @@ final updatedDishes = List.from(state.dishes)..add(BasketDish(dish: event.dishTo
   var duplicated = input.expand((i) => [i, i]).toList();
   print(duplicated); // => [1, 1, 2, 2, 3, 3]
   ```
+  or just like that
+  ```dart
+  var list1d = [for (var list in list2d) ...list];
+  ```
 ## spread operator
 
 ```dart
