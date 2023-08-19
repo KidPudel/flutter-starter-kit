@@ -150,6 +150,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `showDatePicker`
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
 - `ChangeNotifier` - provides change notification to its lisnteners
+- `WillPopScope` - widget that registers a callback by the user to dismiss (we can disable going back)
 
 # Packages
 - Geocoding - [`Geocoding`](https://pub.dev/packages/geocoding), [`Geocoder`](https://pub.dev/packages/geocoder), [`yandex_geocoder`](https://pub.dev/packages/yandex_geocoder) 
