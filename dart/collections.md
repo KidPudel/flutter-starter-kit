@@ -21,7 +21,7 @@ final updatedDishes = List.from(state.dishes)..add(BasketDish(dish: event.dishTo
   ```dart
   var list1d = [for (var list in list2d) ...list];
   ```
-- `any` - checks if any of the element satisfy the requirement
+- `any` - checks if any of the element satisfy the predictor
 - `contains`
 - `where` - filter
 - `map`
