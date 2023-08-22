@@ -170,3 +170,11 @@ GoRoute(
         path: Screens.specialOfferScreen().route,
         builder: (context, state) => const SpecialOfferScreen()),
 ```
+
+## current location
+GoRouter.of(context).location
+
+
+## nested
+https://codewithandrea.com/articles/flutter-bottom-navigation-bar-nested-routes-gorouter/images/nested-navigation-with-state.gif
+
