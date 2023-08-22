@@ -7,3 +7,26 @@ You can register once, like a singleton and then use it over and over again, no 
 **It will not update your UI**, but you can update with Inherited Widget
 
 # How to use it?
+firstly define your dependencies here
+```dart
+final locator = GetIt.instance();
+void inject() {
+  locator.registerSingleton<Dio>(Dio(BaseOptions(contextType: 'application/json')));
+  locator.registerSingleton<SuperGoodApi>(SuperGoodApi(locator<Dio>())) // or use locator.get<Dio>();
+  locator.registerLazy<IMenuRepository>(() => MenuRepository());
+}
+```
+
+now add this function to the root main
+```dart
+void main() {
+  inject();
+  runApp(Application());
+}
+```
+
+and to use it just call
+
+```dart
+void menuRepository = locator.get<IMenuRepository>();
+```
