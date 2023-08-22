@@ -12,6 +12,7 @@ firstly define your dependencies here
 final locator = GetIt.instance();
 void inject() {
   locator.registerSingleton<Dio>(Dio(BaseOptions(contextType: 'application/json')));
+  // to inject inside dependency
   locator.registerSingleton<SuperGoodApi>(SuperGoodApi(locator<Dio>())) // or use locator.get<Dio>();
   locator.registerLazy<IMenuRepository>(() => MenuRepository());
 }
