@@ -177,4 +177,4 @@ GoRouter.of(context).location
 
 ## nested
 https://codewithandrea.com/articles/flutter-bottom-navigation-bar-nested-routes-gorouter/images/nested-navigation-with-state.gif
-
+NASA scrolling is this scenario when you for example in the main screen of my new items and you navigate to the menu item specifically enter is some another item like screen I mean so deep in the tree of the menu list and shell road is the web and you navigate between your menu profile and promo special offers like that, and this is not nested, but just rotes
