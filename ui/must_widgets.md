@@ -160,6 +160,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - [`scrollable_positioned_list`](https://pub.dev/packages/flutter_platform_widgets)
 - [`go_route`](https://pub.dev/packages/go_router)
 - [`permission_handler`](https://pub.dev/packages/permission_handler)
+- [`cached_network_image`](https://pub.dev/packages/cached_network_image) - to load image from network and store in cache directory (also escape http exception, connection closed)
 
 ---
 
