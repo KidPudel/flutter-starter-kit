@@ -153,6 +153,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `WillPopScope` - widget that registers a callback by the user to dismiss (we can disable going back)
 
 # Packages
+- [`get_it`](https://pub.dev/packages/get_it)
 - Geocoding - [`Geocoding`](https://pub.dev/packages/geocoding), [`Geocoder`](https://pub.dev/packages/geocoder), [`yandex_geocoder`](https://pub.dev/packages/yandex_geocoder) 
 - [`FlutterMap`](https://docs.fleaflet.dev/)
 - [`scrollable_positioned_list`](https://pub.dev/packages/scrollable_positioned_list)
@@ -161,10 +162,12 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - [`go_route`](https://pub.dev/packages/go_router)
 - [`permission_handler`](https://pub.dev/packages/permission_handler)
 - [`cached_network_image`](https://pub.dev/packages/cached_network_image) - to load image from network and store in cache directory (also escape http exception, connection closed)
+- [`json_serializable`](https://pub.dev/packages/json_serializable)
+- [`retrofit`](https://pub.dev/packages/retrofit)
 
 ---
 
-So when you usr some fixed not scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
+So when you usr some fixed not   scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
 to make list scrollable inside fixed size column, just make it shrink-warp abd flexible or expanded, so it could take rest of space available and still scrollable by itself but just not full screen, but size youve given, and if you want to make nested list a part of other list, just make it not scrollable primary false, or if it inside column then make SingleSctollqbleView
 # Tips
 - Don't forget to wrap your list with `Expanded` or `SizedBox` to avoid unbounded error
