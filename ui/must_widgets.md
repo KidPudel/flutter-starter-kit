@@ -151,6 +151,11 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `AnimatedSwitcher` - its main job is to automatically create a cross-fade transition when its child widget changes.
 - `ChangeNotifier` - provides change notification to its lisnteners
 - `WillPopScope` - widget that registers a callback by the user to dismiss (we can disable going back)
+- `Radio` - toggles when choosing this option
+- `ToggleButtons` select from options. gives you a list of buttons with convenient isSelected, what happens on press, color of selected etc.
+- `ListTile`
+  ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/60fadaac-b80d-48e6-ab6e-4471b44a5d36)
+
 
 # Packages
 - [`get_it`](https://pub.dev/packages/get_it)
