@@ -155,6 +155,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `ToggleButtons` select from options. gives you a list of buttons with convenient isSelected, what happens on press, color of selected etc.
 - `ListTile`  
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/60fadaac-b80d-48e6-ab6e-4471b44a5d36)
+- `Checkbox`
 
 
 # Packages
