@@ -158,20 +158,6 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `Checkbox`
 - `PageView` - make pages swipeable
 
-
-# Packages
-- [`get_it`](https://pub.dev/packages/get_it)
-- Geocoding - [`Geocoding`](https://pub.dev/packages/geocoding), [`Geocoder`](https://pub.dev/packages/geocoder), [`yandex_geocoder`](https://pub.dev/packages/yandex_geocoder) 
-- [`FlutterMap`](https://docs.fleaflet.dev/)
-- [`scrollable_positioned_list`](https://pub.dev/packages/scrollable_positioned_list)
-- [`flutter_bloc`](https://pub.dev/packages/flutter_bloc)
-- [`scrollable_positioned_list`](https://pub.dev/packages/flutter_platform_widgets)
-- [`go_route`](https://pub.dev/packages/go_router)
-- [`permission_handler`](https://pub.dev/packages/permission_handler)
-- [`cached_network_image`](https://pub.dev/packages/cached_network_image) - to load image from network and store in cache directory (also escape http exception, connection closed)
-- [`json_serializable`](https://pub.dev/packages/json_serializable)
-- [`retrofit`](https://pub.dev/packages/retrofit)
-
 ---
 
 So when you usr some fixed not   scrollabe layout like column, use flexible and expanded and stuff, for scrollable you can set sizes, because it is scrollable.  
