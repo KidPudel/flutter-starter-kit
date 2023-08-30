@@ -48,7 +48,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `LayoutBulder` - can give you currect available space size, as well you can handle logic if too small for example, because of flexible, and you cant see an image, just return image without flexible otherwize
 - `MediaQuery` - **responsive ui**, establishes a subtree in which media query resolves to the given data (like to learn the size of the current media), you can find the width and the height of any device
 - `BoxConstrains` - **responsive ui**
-- `Positioned`
+- `Positioned` - controll how element is positioned in a stack !!!
 
 ## You can space elements with
 - `SizedBox`
@@ -156,6 +156,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `ListTile`  
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/60fadaac-b80d-48e6-ab6e-4471b44a5d36)
 - `Checkbox`
+- `PageView` - make pages swipeable
 
 
 # Packages
