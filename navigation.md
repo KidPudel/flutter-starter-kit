@@ -204,3 +204,55 @@ to use it
 ```dart
 context.go(Uri(path: "path", queryParameters: {'some_param' : data }).toString())
 ```
+
+## Shell route
+```dart
+final _rootKey = GlobalKey<NavigatorState>();
+    final _shellKey = GlobalKey<NavigatorState>();
+    final _goRouter = GoRouter(
+        initialLocation: startingDestination,
+        navigatorKey: _rootKey,
+        routes: [
+          GoRoute(
+              parentNavigatorKey: _rootKey,
+              path: Screens.startScreen().route,
+              builder: (context, state) => const StartScreen()),
+          GoRoute(
+              parentNavigatorKey: _rootKey,
+              path: Screens.mapScreen().route,
+              builder: (context, state) => const MapScreen()),
+          ShellRoute(
+              navigatorKey: _shellKey,
+              builder: (context, state, child) => Scaffold(
+                    appBar: _shellSliverAppBarWithSpecialOffers(context, state),
+                    body: child,
+                  ),
+              routes: [
+                GoRoute(
+                    parentNavigatorKey: _shellKey,
+                    name: Screens.menuScreen().route,
+                    path: Screens.menuScreen().route,
+                    builder: (context, state) => const MenuScreen()),
+                GoRoute(
+                    parentNavigatorKey: _shellKey,
+                    name: Screens.profileScreen().route,
+                    path: Screens.profileScreen().route,
+                    builder: (context, state) => const ProfileScreen()),
+              ]),
+          GoRoute(
+              parentNavigatorKey: _rootKey,
+              name: Screens.specialOfferScreen().route,
+              path: Screens.specialOfferScreen().route,
+              builder: (context, state) => const SpecialOfferScreen()),
+          GoRoute(
+              parentNavigatorKey: _rootKey,
+              name: Screens.basketScreen().route,
+              path: Screens.basketScreen().route,
+              builder: (context, state) => const BasketScreen()),
+          GoRoute(
+              parentNavigatorKey: _rootKey,
+              name: Screens.paymentScreen().route,
+              path: Screens.paymentScreen().route,
+              builder: (context, state) => const PaymentScreen())
+        ]);
+```
