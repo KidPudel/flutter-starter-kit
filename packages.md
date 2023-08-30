@@ -15,7 +15,8 @@
 - [`is_first_run`](https://pub.dev/packages/is_first_run) - check if app is running for the first time (`shered_preferences` internally)
 - [`flutter_multi_formatter`](https://pub.dev/packages/flutter_multi_formatter) - mask formatter (phone, credit/debit card, money, masked, pinyin) also provides country dropdown
 - [`country_picker`](https://pub.dev/packages/country_picker)
-- [google_fonts](https://pub.dev/packages/google_fonts)https://pub.dev/packages/google_fonts
-- [draggable_scrollbar](https://pub.dev/packages/draggable_scrollbar)https://pub.dev/packages/draggable_scrollbar
-- [swipe_cards](https://pub.dev/packages/swipe_cards)https://pub.dev/packages/swipe_cards
-- [card_swiper](https://pub.dev/packages/card_swiper)https://pub.dev/packages/card_swiper
+- [google_fonts](https://pub.dev/packages/google_fonts)
+- [draggable_scrollbar](https://pub.dev/packages/draggable_scrollbar)
+- [swipe_cards](https://pub.dev/packages/swipe_cards)
+- [card_swiper](https://pub.dev/packages/card_swiper)
+- [`url_launcher`](https://pub.dev/packages/url_launcher) - Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
