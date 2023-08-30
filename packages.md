@@ -4,7 +4,7 @@
 - [`FlutterMap`](https://docs.fleaflet.dev/)
 - [`scrollable_positioned_list`](https://pub.dev/packages/scrollable_positioned_list)
 - [`flutter_bloc`](https://pub.dev/packages/flutter_bloc)
-- [`scrollable_positioned_list`](https://pub.dev/packages/flutter_platform_widgets)
+- [`flutter_platform_widgets`](https://pub.dev/packages/flutter_platform_widgets)
 - [`go_route`](https://pub.dev/packages/go_router)
 - [`permission_handler`](https://pub.dev/packages/permission_handler)
 - [`cached_network_image`](https://pub.dev/packages/cached_network_image) - to load image from network and store in cache directory (also escape http exception, connection closed)
@@ -14,4 +14,4 @@
 - [`shared_preferences`](https://pub.dev/packages/shared_preferences) - saves state even on re-run (persistent storage)
 - [`is_first_run`](https://pub.dev/packages/is_first_run) - check if app is running for the first time (`shered_preferences` internally)
 - [`flutter_multi_formatter`](https://pub.dev/packages/flutter_multi_formatter) - mask formatter (phone, credit/debit card, money, masked, pinyin
-- [country_picker](https://pub.dev/packages/country_picker)https://pub.dev/packages/country_picker
+- [`country_picker`](https://pub.dev/packages/country_picker)
