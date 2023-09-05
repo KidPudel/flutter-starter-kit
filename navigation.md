@@ -172,7 +172,9 @@ GoRoute(
 ```
 
 ## current location
-GoRouter.of(context).location
+```dart
+ModalRoute.of(context)?.settings.name
+```
 
 
 ## nested
