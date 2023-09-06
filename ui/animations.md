@@ -145,3 +145,5 @@ void dispose() {
 For `AnimationController` we must provide two parameters:
 1. `duration:` (how long is animation last) because we need an object that tells how far we are in a single rotation
 2. `vsync:` gives a reference to the object to notify about changes. The presence of vsync prevents offscreen animations from consuming unnecessary resources. You can use your stateful object as the `vsync` by adding `SingleTickerProviderStateMixin` to the class definition.
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/fba4ff58-0142-451f-901f-2b53c3df238f)
+
