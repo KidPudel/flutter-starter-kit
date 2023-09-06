@@ -20,3 +20,8 @@
 - [swipe_cards](https://pub.dev/packages/swipe_cards)
 - [card_swiper](https://pub.dev/packages/card_swiper)
 - [`url_launcher`](https://pub.dev/packages/url_launcher) - Flutter plugin for launching a URL. Supports web, phone, SMS, and email schemes.
+
+
+# Animations
+- [`flutter_animate`](https://pub.dev/packages/flutter_animate) - to quickly add simple animations
+- [`animations`](https://pub.dev/packages/animations)    
