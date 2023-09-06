@@ -92,7 +92,10 @@ In this explicit animation example, we control the opacity of the `Container` us
 
 **Choosing Between Implicit and Explicit Animations:**
 - Use implicit animations when you want a simple, straightforward animation that automatically handles property changes.
-- Use explicit animations when you need more control over the animation process, such as running animations based on user interactions or complex animation sequences.
+- Use explicit animations when you need more control over the animation process, such as running animations based on user interactions or complex animation sequences.  
+
+We could use implicit AnimatedContainer, to change the size of the button to extend it on a press, when adding to the basket.  
+We could use explicit transition to play some animation while music is playing.  
 
 Both implicit and explicit animations are powerful and can be used in combination to achieve complex and visually appealing animations in your Flutter app. It's essential to choose the right type of animation based on your specific use case and the level of control you need over the animation process.
 
@@ -120,7 +123,7 @@ Also you can animate padding values, border, eleveation etc
 # Build-in explicit animations
 Explicit animations gives you more controll.  
 we could do something with AnimatedContainer and Transform, but it would turn and then stop...  
-![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/2cc6bd14-2f66-4a2c-9f46-ce268aa37712)
+![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/2cc6bd14-2f66-4a2c-9f46-ce268aa37712)  
 With explicit widgets we have controll of a time, for that we need `AnimationController`  
 `AnimationController` handles checking for ticks and gives us useful controlls of over what our animation doing.  
 Since `AnimationController` also has its own state, we need to manage it with init and dispose
