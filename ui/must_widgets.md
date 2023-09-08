@@ -51,7 +51,7 @@ https://guillaume.bernos.dev/10-beginners-mistakes-to-learn-from-in-flutter/
 - `Positioned` - controll how element is positioned in a stack !!!
 
 ## You can space elements with
-- `SizedBox`
+- `SizedBox`/`FractionallySizedBox`
 - `Flexible` - in columns and rows
 - `Padding` - in columns and rows
 
