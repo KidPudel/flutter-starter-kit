@@ -1,6 +1,10 @@
 # Ubounded error?
 https://www.youtube.com/watch?v=jckqXR5CrPI&ab_channel=Flutter
 
+> - If all childrens constraints are set, you dont need to specify a size of a column
+> - If column size is specified, you can use flexible layout on children
+> - If coulumn is a child of a top widget in a tree like scaffold, you dont need to set constraints, because they are inheriting from parent
+
 # How to center element?
 
 
