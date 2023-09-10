@@ -14,18 +14,18 @@
 - multiple singleton contructors
   ```dart
   class Routes {
-  final String route;
-  Routes._(this.route);
+    final String route;
+    Routes._(this.route);
 
-  factory Routes.startPage() => Routes._("/");
-  factory Routes.loginPage() => Routes._("/login_page");
-  factory Routes.smsPage() => Routes._("/sms_page");
-  factory Routes.mapPage() => Routes._("/map_page");
-  factory Routes.addressPage() => Routes._("/address_page");
-  factory Routes.navigationPage() => Routes._("/navigation_page");
-  factory Routes.specialOfferPage() => Routes._("/special_offer_page");
-  factory Routes.savedAddressesPage() => Routes._("/saved_addresses_page");
-  factory Routes.basketPage() => Routes._("/basket_page");
-  factory Routes.paymentPage() => Routes._("/payment_page");
-}
+    factory Routes.startPage() => Routes._("/");
+    factory Routes.loginPage() => Routes._("/login_page");
+    factory Routes.smsPage() => Routes._("/sms_page");
+    factory Routes.mapPage() => Routes._("/map_page");
+    factory Routes.addressPage() => Routes._("/address_page");
+    factory Routes.navigationPage() => Routes._("/navigation_page");
+    factory Routes.specialOfferPage() => Routes._("/special_offer_page");
+    factory Routes.savedAddressesPage() => Routes._("/saved_addresses_page");
+    factory Routes.basketPage() => Routes._("/basket_page");
+    factory Routes.paymentPage() => Routes._("/payment_page");
+  }
   ```
