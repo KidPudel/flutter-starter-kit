@@ -114,7 +114,6 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
   - onTap
   - onPan (swipe)
   - etc
-
 - Buttons
   - `ElevatedButton`
   - `OutlinedButton`
@@ -157,6 +156,8 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
   ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/60fadaac-b80d-48e6-ab6e-4471b44a5d36)
 - `Checkbox`
 - `PageView` - make pages swipeable
+- `StatefulBuilder` - widget that has state and **!!! delegates its build to a callback !!!**
+- Transform
 
 ---
 
