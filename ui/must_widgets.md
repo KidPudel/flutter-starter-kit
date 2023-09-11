@@ -157,7 +157,7 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `Checkbox`
 - `PageView` - make pages swipeable
 - `StatefulBuilder` - widget that has state and **!!! delegates its build to a callback !!!**
-- Transform
+- `Transform` - **!!! widget that transforms its child !!!** you can `scale`, `flip`, `rotate`, `translate`
 
 ---
 
