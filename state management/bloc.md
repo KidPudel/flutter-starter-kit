@@ -111,6 +111,9 @@ When to use bloc?
 - Example with weather app, you search for locations and tap each letter, cubit would be looking each time you change it for locations, bloc is a listener so it could call it every 4 words or 2 seconds or when we stop tapping, we can easily manage it in a stream.
 
 
+> # Bloc is _Event-Driven_ (event could be, GetItems event, ClearBasket event), where as cubit is _not event-driven_, you just pass it state, and it emits value
+
+
 # Widget components 
 > Note: all components work with cubit and bloc, because bloc is the cubit
 ## `BlocProvider`: widget that nests and lets access a bloc/cubit in a tree and sends a stream of data
