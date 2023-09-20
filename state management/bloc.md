@@ -233,6 +233,52 @@ Similar to `BlocBuilder`, `BlocListener` is a widget that listens to changes in 
 
 Using these components together, you can effectively implement the BLoC pattern in your Flutter application, promoting better separation of concerns and improved maintainability.
 
+```dart
+BlocListener<BasketBloc, BasketState>(
+                                      listener: (context, state) {
+                                        if (state.status.isNotEmpty) {
+                                          // listen to the state changes of basket bloc, and call get order info only when it is loaded
+                                          context
+                                              .read<OrderInfoBloc>()
+                                              .add(GetOrderInfo());
+                                        }
+                                      },
+                                      child: BlocBuilder<OrderInfoBloc,
+                                          OrderInfoState>(
+                                        builder: (context, state) {
+                                          if (state.status.isLoaded) {
+                                            return Text(
+                                              "от ${state.orderInfo!.sales.calcdlvtime} мин",
+                                              style: TextStyle(
+                                                color: (Theme.of(context)
+                                                            .brightness ==
+                                                        Brightness.light)
+                                                    ? Colors.white
+                                                    : Colors.black,
+                                              ),
+                                            );
+                                          } else if (state.status.isLoading) {
+                                            return CircularProgressIndicator
+                                                .adaptive(
+                                              backgroundColor:
+                                                  CustomColors().buttonColor,
+                                              valueColor:
+                                                  AlwaysStoppedAnimation<Color>(
+                                                      CustomColors()
+                                                          .darkButtonColor),
+                                            );
+                                          } else {
+                                            return Text(
+                                              state.status.name,
+                                              style:
+                                                  TextStyle(color: Colors.red),
+                                            );
+                                          }
+                                        },
+                                      ),
+                                    ),
+```
+
 ## `BlocConsumer`: Combination of `BlocBuilder` and `BlocListener`
 ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/ed3674bb-b475-4136-a7d3-1782539c65e0)  
 ```dart
