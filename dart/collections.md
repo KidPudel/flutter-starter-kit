@@ -29,6 +29,9 @@ final updatedDishes = List.from(state.dishes)..add(BasketDish(dish: event.dishTo
 - `firstWhere`
 - `getRange`
 - `entry`
+- `substring`
+- `replaceAll`
+- `expland` - make a 1d collection (concatenate)
 ## spread operator
 
 ```dart
