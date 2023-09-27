@@ -174,6 +174,20 @@ GoRoute(
 ## current location
 ```dart
 ModalRoute.of(context)?.settings.name
+
+...
+if (widget.pageFrom == Routes.startPage().route) {
+                context.go(Routes.startPage().route);
+              } else if (widget.pageFrom == Routes.navigationPage().route) {
+                context.go(Routes.navigationPage().route);
+              } else if (widget.pageFrom == Routes.paymentPage().route) {
+                context.go(Routes.paymentPage().route);
+              }
+```
+
+# check if pushed
+```dart
+context.canPop() ? :
 ```
 
 
