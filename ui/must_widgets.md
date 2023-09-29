@@ -98,6 +98,8 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
 - `SliverAppBar`
 - `SliverToBoxAdapter` - to place a non sliver widget in sliver
 - `SliverFillRemaining`
+- `DecoratedSliver`
+- `SliverPadding`
 - `FlexibleAppBar`
 - `AnimatedFoo`
   - `AnimatedContainer` animated container that animates its children explicitly
