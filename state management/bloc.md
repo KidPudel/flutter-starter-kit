@@ -383,3 +383,66 @@ BlocBuilder<UserBloc, UserState>(
   builder: (context) => Text(state.status.isLoggedIn ? state.name : "logging..." <- or handle logging with CircularProgressIndicator with future builder)
 )
 ```
+
+
+# Cascade triggering bloc from core to outside (from inner to outter)
+`dart
+body: BlocListener<OrderInfoBloc, OrderInfoState>(
+        listener: (context, state) {
+          if (state.status.isNotEmpty || state.status.isEmpty) {
+            context.go(Routes.navigationPage().route);
+          } else {
+            print("status ${state.status}");
+          }
+        },
+        child: BlocListener<MenuBloc, MenuState>(
+          listener: (context, state) {
+            if (state.status.isLoaded) {
+              context.read<OrderInfoBloc>().add(GetOrderInfo());
+            }
+          },
+          child: BlocConsumer<UserPrefBloc, UserPrefState>(
+            listener: (context, state) {
+              if (state.status.isEmpty || state.status.isLoaded) {
+                print("LOADING @!!!!!!!!!!!");
+                context.read<MenuBloc>().add(GetMenu());
+                // context.read<OrderInfoBloc>().add(GetOrderInfo());
+                context.read<PromotionBloc>().add(GetPromotions());
+              } else {
+                print(" UserPrefBloc listener else ${state.status}");
+              }
+            },
+            builder: (context, state) {
+              if (state.status.isLoaded) {
+                return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Stack(children: [
+                      Center(
+                        child:
+                            Lottie.asset('animations/start_splash_screen.json'),
+                      ),
+                      Positioned(
+                        child: Text(
+                          state.userPref?.name != null
+                              ? "Здравствуйте, ${state.userPref?.name}!"
+                              : "Здравствуйте",
+                          style: TextStyle(fontSize: 30),
+                        ),
+                        top: MediaQuery.of(context).size.height * 0.2,
+                        right: 0,
+                        left: 0,
+                      )
+                    ]));
+              } else {
+                return Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Center(
+                      child:
+                          Lottie.asset('animations/start_splash_screen.json'),
+                    ));
+              }
+            },
+          ),
+        ),
+      ),
+`
