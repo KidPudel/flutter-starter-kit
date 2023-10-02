@@ -386,7 +386,7 @@ BlocBuilder<UserBloc, UserState>(
 
 
 # Cascade triggering bloc from core to outside (from inner to outter)
-`dart
+```dart
 body: BlocListener<OrderInfoBloc, OrderInfoState>(
         listener: (context, state) {
           if (state.status.isNotEmpty || state.status.isEmpty) {
@@ -445,4 +445,4 @@ body: BlocListener<OrderInfoBloc, OrderInfoState>(
           ),
         ),
       ),
-`
+```
