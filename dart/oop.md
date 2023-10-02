@@ -205,5 +205,14 @@ extension CategoryName on Category {
   }
 }
 ```
+
+# Static
+static means that function or variable is the part of the class and NOT of the individual object => it existis before initializing the object:
+1. you can access only static members in static function
+2. non-static members cannot be accessed in a static funcation
+3. you can call it without initialization
+4. not associated with the object
+
+
 more info here -> [INFO](https://dart.dev/samples)
 
