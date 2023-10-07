@@ -485,7 +485,7 @@ Now all flex-factor relative sized widgets (i.e. Expanded_A, Expanded_B) have bo
 
 Note that you can use Flexible interchangably here with Expanded. It calculates remaining space the same way as Expanded. It just doesn't force children to fit its size, so they can be smaller if they wish.
 
-```
+```dart
 NOT OK
 /// Unbounded constraint: NOT OK
 class RenderFlexUnboundedPage extends StatelessWidget {
@@ -530,3 +530,6 @@ class RenderFlexPage extends StatelessWidget {
   }
 }
 ```
+
+
+# If you want to place dynamically sized child in a listview, just don't specify size of a child
