@@ -1,4 +1,4 @@
-stores the widget state when this widget moves in a widget tree
+stores the widget state when this widget moves in a widget tree, it's useful to store the widget's state having the same type of data
 
 # ValueKey
 We can trigger state of a Container with `ValueKey` to trigger smooth crossfade animation, instead of junky one
