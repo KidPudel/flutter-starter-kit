@@ -107,7 +107,8 @@ The difference between `FlexFit.tight` and `FlexFit.loose` is that loose will al
     ![image](https://github.com/KidPudel/flutter-starter-kit/assets/63263301/b5dfcb20-93ff-4d32-b883-4d51bb87810d)
 
 - `FooTransition`
-- `FutureBuilder` - we can know when it is loading and display `CircularProgressIdicator`
+- `FutureBuilder` - builds on state what we want, we can know when it is loading and display `CircularProgressIdicator`
+- `ValueListenableBuilder` - builds when `valueListenable` is changed
 - `CircularProgressIndicator`
 - `Container` - do you need a background color, or shape or some size constraints (position also) aslo padding and margin
 - `Card` - like a Container but with elevation
